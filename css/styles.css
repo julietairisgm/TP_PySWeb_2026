@@ -1,0 +1,289 @@
+:root{
+    --bg-color: #f4f4f4;
+    --text-color: #032c40;
+    --primary: #148d8d;
+    --accent: #efbc75;
+    --surface: #ffffff;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0e2c40;
+        --text-color: #f4f4f4;
+        --primary: #c1e1a7;
+        --accent: #efbc75;
+        --surface: #1a4a5a;
+    }
+}
+/*[data-theme="dark"] {
+    --bg-color: #0e2c40;
+    --text-color: #f4f4f4;
+    --primary: #c1e1a7;
+    --accent: #efbc75;
+    --surface: #1a4a5a;
+}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: backgraund-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* SECCION HEADER */
+.header {
+    background-color: var(--surface);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    top: 0;
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        padding: 20px;
+        position: sticky;
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+/* SECCION HERO */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+
+    .hero-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(3, 33, 47, 0.6); 
+        z-index: 2;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {    
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+    
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+    }
+}
+
+/* SECCION MAIN */
+.destinos-content {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px 60px;
+
+    h2 {
+        text-align: center;
+    }
+
+    .destinos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+}
+
+.destinos-card {
+    position: relative; /*prueba*/ 
+    background-color: var(--surface);
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    .card-image {
+        position: relative;
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-overlay {
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background: linear-gradient(to top, rgba(3, 44, 64, 0.9) 10%, rgba(3, 44, 64, 0.2) 50%, transparent 100%);
+        display: flex;
+        align-items: flex-end;
+
+        .card-content {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                font-size: 0.9rem;
+            }
+
+            .card-precio-fila {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding-top: 10px;
+                color: var(--primary);
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #032c40;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.3);
+    }
+}
+
+/* SECCION FOOTER */
+.footer {
+    background-color: #021a26;
+    color: #ffffff;
+    padding: 60px 5%;
+    margin-top: 50px;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-link a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap: 15px;
+
+    input {
+        width: 80%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
