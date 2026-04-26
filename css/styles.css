@@ -58,7 +58,7 @@ body {
         display: flex;
         list-style: none;
         gap: 40px;
-        padding: 20px;
+        padding: 30px;
         position: sticky;
 
         .nav-link {
@@ -79,7 +79,7 @@ body {
 /* SECCION HERO */
 .hero {
     position: relative;
-    height: 85vh;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +101,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(3, 33, 47, 0.6); 
+        background: rgba(4, 22, 30, 0.6); 
         z-index: 2;
     }
     .hero-content {
@@ -131,6 +131,7 @@ body {
 
 /* SECCION MAIN */
 .destinos-content {
+    background-color: var(--bg-color);
     max-width: 1200px; 
     margin: 0 auto;
     padding: 20px 60px;
@@ -188,6 +189,7 @@ body {
             flex-direction: column;
             align-items: center;
             gap: 8px;
+            color: #ffffff;
 
             h3 {
                 font-size: 1.5rem;
@@ -203,7 +205,7 @@ body {
                 align-items: center;
                 width: 100%;
                 padding-top: 10px;
-                color: var(--primary);
+                color: #c1e1a7;
                 font-weight: bold;
                 font-size: 1.2rem;
             }
@@ -224,6 +226,50 @@ body {
         filter: brightness(1.3);
     }
 }
+
+.stats {
+    padding: 50px;
+    background-color: var(--surface);
+    text-align: center;
+
+    p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0.8;
+        color: var(--text-color);
+    }
+
+    .stat-container {
+        height: 80px; /* Ajusta esto al tamaño de tu fuente */
+        overflow: hidden; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .counter-numbers {
+            display: flex;
+            flex-direction: column;
+            animation: subir-contador 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+
+            span {
+                font-size: 4.5rem;
+                font-weight: 800;
+                color: var(--accent);
+                line-height: 80px; /* DEBE ser igual al height del container */
+                height: 80px;
+            }
+        }
+    }
+}
+/* El cálculo: si cada número mide 80px y hay 6 números, 
+   para llegar al último (500) que es el índice 5: 80 * 5 = 400px */
+@keyframes subir-contador {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-400px); }
+}    
 
 /* SECCION FOOTER */
 .footer {
