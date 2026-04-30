@@ -38,12 +38,48 @@
 }
 
 .filter-input:not(#todos):checked ~ .galeria .destinos-card {
-    display: none;
+    order: 9999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 /* LÓGICA DE FILTRO */
 #todos:checked ~ .galeria .destinos-card,
 #cultural:checked ~ .galeria .destinos-card.cultural,
 #naturaleza:checked ~ .galeria .destinos-card.naturaleza,
 #playa:checked ~ .galeria .destinos-card.playa {
+    order: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ========== MASONRY ========== */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    grid-auto-rows: 10px;
+    gap: 20px;
+}
+
+.galeria .destinos-card {
+    height: auto ;
+    grid-row-end: span 10;
+    display: flex !important;
+    flex-direction: column ;
+    order: 9999 !important;
+    transition: all 0.4s ease !important;
+} 
+.galeria .destinos-card:nth-child(4n+1) { grid-row-end: span 15; }
+.galeria .destinos-card:nth-child(4n+2) { grid-row-end: span 18; }
+
+.galeria .card-image {
+    flex: 1;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.galeria .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
