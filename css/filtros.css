@@ -1,0 +1,49 @@
+.menu-filtros {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.grupo-filtros { 
+    position: relative;
+}
+.filter-input { 
+    display: none;
+}
+.filter-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+#todos:checked ~ .menu-filtros label[for="todos"],
+#cultural:checked ~ .menu-filtros label[for="cultural"],
+#naturaleza:checked ~ .menu-filtros label[for="naturaleza"],
+#playa:checked ~ .menu-filtros label[for="playa"] {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.filter-input:not(#todos):checked ~ .galeria .destinos-card {
+    display: none;
+}
+/* LÓGICA DE FILTRO */
+#todos:checked ~ .galeria .destinos-card,
+#cultural:checked ~ .galeria .destinos-card.cultural,
+#naturaleza:checked ~ .galeria .destinos-card.naturaleza,
+#playa:checked ~ .galeria .destinos-card.playa {
+    display: block;
+}
