@@ -29,7 +29,7 @@
                     <img src="assets/img/contacto.png" alt="Contacto">
                 </div>
                 <div class="form-overlay"></div>
-                <form class="form-contacto">
+                <form class="form-contacto" action="#confirmacion">
                     <h2>Contáctanos</h2>
                     <input type="text" required minlength="3" placeholder="Tu nombre">
                     <input type="email" required placeholder="Tu email">
@@ -42,7 +42,13 @@
             </div>
         </section>
     </main>
-
+    <div id="confirmacion" class="modal">
+        <div class="modal-contenido">
+            <h3>✅ Mensaje enviado</h3>
+            <p>Gracias por contactarnos. Te responderemos pronto.</p>
+            <a href="#" class="btn-primary">Cerrar</a>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer-container">
         <!--Formulario-->
@@ -67,6 +73,7 @@
             </div>
         </div>
     </footer>
+
 
 </body>
 </html>
