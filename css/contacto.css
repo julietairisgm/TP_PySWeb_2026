@@ -52,6 +52,29 @@
     margin-top: 20px;
 }
 
+button .spinner {
+    width: 27px;
+    height: 27px;
+    border: 3px solid #148d8d;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+
+    display: none;
+}
+button:active .spinner {
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+button:active .texto {
+    display: none;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .form-contacto input:invalid:not(:placeholder-shown),
 .form-contacto textarea:invalid:not(:placeholder-shown) {
     border-color: red;
