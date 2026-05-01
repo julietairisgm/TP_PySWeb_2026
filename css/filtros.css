@@ -113,13 +113,18 @@
 .destinos-card:hover .card-content {
     transform: translateY(0);
 }
-/* TABLA DE PRECIOS */
+/* TABLA DEsSTINOS */
+.destinos {
+    height: auto;
+}
 .tabla-container {
     width: 100%;
     overflow-x: auto;
-    margin: 40px 0;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-.tabla-destinos {
+.tabla-destinos{
     width: 100%;
     border-collapse: collapse;
     font-family: sans-serif;
@@ -143,7 +148,6 @@
 }
 
 @media (max-width: 768px) {
-
     .tabla-destinos thead {
         display: none;
     }
@@ -164,18 +168,18 @@
     }
 
     .tabla-destinos td {
-        position: relative;
         padding-left: 50%;
         text-align: right;
+        position: relative;
     }
 
     .tabla-destinos td::before {
         content: attr(data-label);
         position: absolute;
         left: 15px;
+        font-weight: bold;
         top: 50%;
         transform: translateY(-50%);
-        font-weight: bold;
         color: var(--primary);
     }
 }
