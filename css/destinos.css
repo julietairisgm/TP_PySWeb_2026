@@ -1,82 +1,185 @@
-.contenedor-agencias {
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 20px 60px;
+.menu-filtros {
+    padding: 30px;
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.card-agencia {
-    width: 250px;
-    height: 320px;
-    perspective: 1000px; /* clave para 3D */
-    border-radius: 2px solid;
-}
-.card-inner {
-    width: 100%;
-    height: 100%;
+.grupo-filtros { 
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
 }
-.card-agencia:hover .card-inner {
-    transform: rotateY(180deg);
+.filter-input { 
+    display: none;
 }
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* oculta la cara trasera */
-    border-radius: 12px;
-    overflow: hidden;
-    border: 5px solid var(--primary);
-}
-.card-front {
-    background: var(--surface);
+.filter-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid color-mix(in srgb, var(--text-color) 20%, transparent);
 }
-.card-front img {
+
+#todos:checked ~ .menu-filtros label[for="todos"],
+#cultural:checked ~ .menu-filtros label[for="cultural"],
+#naturaleza:checked ~ .menu-filtros label[for="naturaleza"],
+#playa:checked ~ .menu-filtros label[for="playa"] {
+    background: var(--primary);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: var(--primary);
+}
+
+.filter-input:not(#todos):checked ~ .galeria .destinos-card {
+    order: 9999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+/* LÓGICA DE FILTRO */
+#todos:checked ~ .galeria .destinos-card,
+#cultural:checked ~ .galeria .destinos-card.cultural,
+#naturaleza:checked ~ .galeria .destinos-card.naturaleza,
+#playa:checked ~ .galeria .destinos-card.playa {
+    order: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* MASONRY */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    grid-auto-rows: 10px;
+    gap: 20px;
+}
+.galeria .destinos-card {
+    height: auto ;
+    grid-row-end: span 10;
+    display: flex !important;
+    flex-direction: column ;
+    order: 9999 !important;
+    transition: all 0.4s ease !important;
+} 
+.galeria .destinos-card:nth-child(4n+1) { grid-row-end: span 15; }
+.galeria .destinos-card:nth-child(4n+2) { grid-row-end: span 18; }
+
+.galeria .card-image {
+    flex: 1;
+    min-height: 200px;
+    overflow: hidden;
+}
+.galeria .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
 }
-.card-back {
-    background: var(--primary);
-    color: var(--bg-color);
-    transform: rotateY(180deg);
+.galeria .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,rgba(0,0,0,0.7),rgba(0,0,0,0.2));
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.galeria .card-content {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+.card-content h3 {
+    margin: 0;
+    font-size: 20px;
+}
+.card-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+.destinos-card:hover img {
+    transform: scale(1.1);
+}
+.destinos-card:hover .card-overlay {
+    opacity: 1;
+}
+.destinos-card:hover .card-content {
+    transform: translateY(0);
+}
+/* TABLA DEsSTINOS */
+.destinos {
+    height: auto;
+}
+.tabla-container {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.tabla-destinos{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    background: var(--surface);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tabla-destinos thead {
+    background: var(--primary);
+}
+.tabla-destinos th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+.tabla-destinos td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-color);
 }
 
-.rating {
-    display: flex;
-    flex-direction: row-reverse; /* clave */
-    justify-content: center;
-}
-.rating input {
-    display: none;
-}
-.rating label {
-    font-size: 30px;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: 0.3s;
-}
-.rating label:hover,
-.rating label:hover ~ label {
-    color: var(--accent);
-    transform: scale(1.2);
-}
-.rating input:checked ~ label {
-    color: rgb(255, 200, 0);
+@media (max-width: 768px) {
+    .tabla-destinos thead {
+        display: none;
+    }
+
+    .tabla-destinos,
+    .tabla-destinos tbody,
+    .tabla-destinos tr,
+    .tabla-destinos td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-destinos tr {
+        margin-bottom: 20px;
+        background: var(--surface);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .tabla-destinos td {
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .tabla-destinos td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--primary);
+    }
 }

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Global - Tu Viaje Perfecto Comienza Aquí</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/precios.css">
-
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body data-theme="dark">
     <header class="header">
@@ -24,43 +23,20 @@
     </header>
 
     <main>
-        <section class="precios">
-        <h2>Comparador de destinos</h2>
-
-        <div class="tabla-container">
-            <table class="tabla-precios">
-                <thead>
-                    <tr>
-                        <th>Destino</th>
-                        <th>Duración</th>
-                        <th>Precio</th>
-                        <th>Incluye</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Destino" data-tooltip="Ciudad inca en Perú, Patrimonio de la Humanidad (UNESCO)">Machu Picchu</td>
-                        <td data-label="Duración" data-tooltip="Incluye días de traslado">5 días</td>
-                        <td data-label="Precio" data-tooltip="Precio por persona en base doble">$1200</td>
-                        <td data-label="Incluye" data-tooltip="Incluye hotel, excursiones guiadas y traslados internos">Hotel + Tours</td>
-                    </tr>
-
-                    <tr>
-                        <td data-label="Destino" data-tooltip="Destino turístico en el sudeste asiático">Tailandia</td>
-                        <td data-label="Duración" data-tooltip="Incluye actividades y excursiones">7 días</td>
-                        <td data-label="Precio" data-tooltip="No incluye vuelos internacionales">$1800</td>
-                        <td data-label="Incluye" data-tooltip="Incluye hotel, comidas y excursiones completas">All Inclusive</td>
-                    </tr>
-
-                    <tr>
-                        <td data-label="Destino" data-tooltip="Destino de playa en América del Sur">Brasil</td>
-                        <td data-label="Duración" data-tooltip="Estadía estándar sin excursiones">4 días</td>
-                        <td data-label="Precio" data-tooltip="Precio promocional por tiempo limitado">$900</td>
-                        <td data-label="Incluye" data-tooltip="Incluye alojamiento y desayuno diario">Hotel + Desayuno</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="contacto">
+            <div class="contacto-container">
+                <div class="contacto-img">
+                    <img src="assets/img/contacto.png" alt="Contacto">
+                </div>
+                <div class="form-overlay"></div>
+                <form class="form-contacto">
+                    <h2>Contáctanos</h2>
+                    <input type="text" required minlength="3" placeholder="Tu nombre">
+                    <input type="email" required placeholder="Tu email">
+                    <textarea required minlength="10" placeholder="Déjanos tu mensaje"></textarea>
+                    <button type="submit" class="btn-primary">Enviar</button>
+                </form>
+            </div>
         </section>
     </main>
 
