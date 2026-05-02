@@ -26,56 +26,71 @@
     <main>
         <section class="blog-header">
             <h2>Blog de Destinos</h2>
-            <p>Explora artículos de viaje en formato revista</p>
+            <p>Explora los artículos de nuestros viajes a los destinos de ensueño</p>
         </section>
+            
+        <input type="radio" id="todos" name="filter" class="filter-input" checked>
+        <input type="radio" id="cultura" name="filter" class="filter-input">
+        <input type="radio" id="aventura" name="filter" class="filter-input">
+        <input type="radio" id="gastronomia" name="filter" class="filter-input">
+        <input type="radio" id="playa" name="filter" class="filter-input">
+
+        <div class="menu-filtros">
+            <label for="todos" class="filter-label">🌟 Todos</label>
+            <label for="cultura" class="filter-label">🎭 Cultura</label>
+            <label for="aventura" class="filter-label">🌿 Aventura</label>
+            <label for="gastronomia" class="filter-label">🏖️ Gastronomia</label>
+            <label for="playa" class="filter-label">🏖️ Playas</label>
+        </div>
+
         <section class="blog">
 
         <!-- ARTÍCULO GRANDE (DESTACADO) -->
-            <article class="post post--featured">
+            <article class="post post--featured aventura">
                 <img src="assets/img/noruega.png" alt="">
                 <div class="content">
                     <h3>Destino Imperdible en Noruega</h3>
-                    <p>Un recorrido por paisajes únicos y cultura local.</p>
+                    <p>Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.</p>
                 </div>
             </article>
         <!-- ARTÍCULO MEDIO -->
-            <article class="post">
+            <article class="post aventura">
                 <img src="assets/img/machupichu.png" alt="">
                 <div class="content">
-                    <h4>Aventura en la montaña</h4>
-                    <p>Experiencias extremas y naturaleza pura.</p>
+                    <h4>Aventura Inca</h4>
+                    <p>Trekking a través de la historia.</p>
                 </div>
             </article>
         <!-- ARTÍCULO PEQUEÑO -->
-            <article class="post post--small">
+            <article class="post post--small gastronomia">
                 <h5>Gastronomía local</h5>
             </article>
         <!-- ARTÍCULO GRANDE SECUNDARIO -->
-            <article class="post post--wide">
+            <article class="post post--wide cultura">
                 <img src="assets/img/tailandia.png" alt="">
                 <div class="content">
-                    <h3>Ruta histórica por ciudades coloniales</h3>
-                    <p>Un viaje al pasado lleno de arquitectura y cultura.</p>
+                    <h3>Ruta lleno de espiritualidad</h3>
+                    <p>Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
                 </div>
             </article>
         <!-- ARTÍCULO GRANDE SECUNDARIO -->
-            <article class="post post--wide">
+            <article class="post post--wide aventura">
                 <img src="assets/img/islandia.png" alt="">
                 <div class="content">
-                    <h3>Ruta histórica por ciudades coloniales</h3>
-                    <p>Un viaje al pasado lleno de arquitectura y cultura.</p>
+                    <h3>Encontrando las auroras</h3>
+                    <p>Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.</p>
                 </div>
             </article>
         <!-- ARTÍCULO PEQUEÑO -->
-            <article class="post post--small">
+            <article class="post post--small cultura">
                 <h5>Cultura y tradiciones</h5>
             </article>
         <!-- ARTÍCULO MEDIO -->
-            <article class="post">
-                <img src="assets/img/estambul.png" alt="">
+            <article class="post playa">
+                <img src="assets/img/playa.png" alt="">
                 <div class="content">
-                    <h4>Playas escondidas</h4>
-                    <p>Lugares paradisíacos poco conocidos.</p>
+                    <h4>Playas que conectan</h4>
+                    <p>¿Te imaginas tener la compañia de uno de los animales más longevos del mundo? .</p>
                 </div>
             </article>
         </section>

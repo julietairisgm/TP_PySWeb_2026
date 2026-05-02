@@ -85,6 +85,64 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.menu-filtros {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.grupo-filtros { 
+    position: relative;
+}
+.filter-input { 
+    display: none;
+}
+.filter-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    color: var(--text-color);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+}
+
+#todos:checked ~ .menu-filtros label[for="todos"],
+#cultural:checked ~ .menu-filtros label[for="cultura"],
+#naturaleza:checked ~ .menu-filtros label[for="naturaleza"],
+#playa:checked ~ .menu-filtros label[for="playa"],
+#gastronomia:checked ~ .menu-filtros label[for="gastronomia"]{
+    background: var(--primary);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: var(--primary);
+}
+
+/* ocultar todo excepto seleccionados */
+.filter-input:not(#todos):checked ~ .blog .post {
+    opacity: 0;
+    visibility: hidden;
+    order: 999;
+}
+
+/* mostrar los que coinciden */
+#todos:checked ~ .blog .post,
+#aventura:checked ~ .blog .post.aventura,
+#cultura:checked ~ .blog .post.cultura,
+#gastronomia:checked ~ .blog .post.gastronomia,
+#playa:checked ~ .blog .post.playa {
+    opacity: 1;
+    visibility: visible;
+    order: 1;
+}
+
 @media (max-width: 600px) {
     .blog {
         grid-template-columns: 1fr;
