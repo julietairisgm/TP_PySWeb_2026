@@ -20,7 +20,7 @@
     z-index: 1;
 }
 .form-contacto h2 {
-    color: #f4f4f4;
+    color: var(--white);
     padding: 20px;
 }
 .form-contacto {
@@ -42,7 +42,7 @@
 
 .form-contacto input,
 .form-contacto textarea {
-    border: 2px solid #f4f4f4;
+    border: 2px solid var(--white);
     padding: 12px;
     border-radius: 6px;
     transition: 0.3s;

@@ -1,5 +1,12 @@
 .precios {
-    height: auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.precios h2 {
+    text-align: center;
+    font-size: 2.2rem;
 }
 /* TABLA DE PRECIOS */
 .tabla-container {
@@ -14,7 +21,6 @@
     border-collapse: collapse;
     font-family: sans-serif;
     background: var(--surface);
-    border-radius: 10px;
 }
 .tabla-precios thead {
     background: var(--primary);
