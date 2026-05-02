@@ -25,6 +25,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
+
 .post img {
     width: 100%;
     height: 150px;
@@ -147,6 +148,7 @@
     padding: 40px;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 80px;
 }
 .comentarios h3 {
     margin-bottom: 20px;
@@ -201,6 +203,31 @@
 .comentario:hover .texto {
     transform: translateX(5px);
     transition: 0.3s;
+}
+/* =========================
+   SCROLL REVEAL BLOG
+========================= */
+.blog .post,
+.comentarios .comentario {
+    opacity: 0;
+    transform: translateY(40px);
+}
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog .post,
+.comentarios .comentario {
+    animation: reveal 0.6s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
 }
 
 @media (max-width: 600px) {
