@@ -1,3 +1,4 @@
+/* SECCION BLOG */
 .blog-header {
     padding: 40px;
     text-align: center;
@@ -14,7 +15,7 @@
     align-items: start;
     margin-bottom: 80px;
 }
-
+/* ESTILO REVISTA */
 .post {
     background: var(--surface);
     border-radius: 12px;
@@ -26,7 +27,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
-
 .post img {
     width: 100%;
     height: 150px;
@@ -88,6 +88,7 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* FILTRO POR CATEGORIAS */
 .menu-filtros {
     padding: 20px;
     display: flex;
@@ -116,6 +117,7 @@
     border: 2px solid color-mix(in srgb, var(--text-color) 20%, transparent);
 }
 
+/* Logica de Filtrado */
 #todos:checked ~ .menu-filtros label[for="todos"],
 #cultural:checked ~ .menu-filtros label[for="cultura"],
 #aventura:checked ~ .menu-filtros label[for="aventura"],
@@ -127,15 +129,11 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     border-color: var(--primary);
 }
-
-/* ocultar todo excepto seleccionados */
 .filter-input:not(#todos):checked ~ .blog .post {
     opacity: 0;
     visibility: hidden;
     order: 999;
 }
-
-/* mostrar los que coinciden */
 #todos:checked ~ .blog .post,
 #aventura:checked ~ .blog .post.aventura,
 #cultura:checked ~ .blog .post.cultura,
@@ -146,6 +144,7 @@
     order: 1;
 }
 
+/* SECCION COMENTARIOS */
 .comentarios {
     padding: 40px;
     max-width: 800px;
@@ -163,7 +162,7 @@
     margin-bottom: 20px;
     align-items: center;
 }
-
+/* DIBUJO DE AVATAR */
 .avatar {
     width: 50px;
     height: 50px;
@@ -194,6 +193,7 @@
     background: white;
     border-radius: 10px 10px 0 0;
 }
+/* CONTENIDO DEL COMENTARIO */
 .texto {
     background: var(--surface);
     padding: 12px 16px;
@@ -208,9 +208,7 @@
     transform: translateX(5px);
     transition: 0.3s;
 }
-/* =========================
-   SCROLL REVEAL BLOG
-========================= */
+/* SCROLL REVEAL BLOG */
 .blog .post,
 .comentarios .comentario {
     opacity: 0;
@@ -226,7 +224,6 @@
         transform: translateY(0);
     }
 }
-
 .blog .post,
 .comentarios .comentario {
     animation: reveal 0.6s ease-out;
@@ -234,6 +231,7 @@
     animation-range: entry 0% cover 100%;
 }
 
+/* RESPONSIVE */
 @media (max-width: 600px) {
     .blog {
         grid-template-columns: 1fr;

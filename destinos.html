@@ -24,6 +24,8 @@
                 </div>
                 <span class="logo-texto">Trip Tour</span>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
             <nav class="nav">
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -39,6 +41,7 @@
     </header>
 
     <main class="snap-container">
+    <!-- Seccion DESTINOS -->
         <section class="snap-section destinos">
             <h2>Nuestros Destinos</h2>           
 
@@ -88,7 +91,6 @@
                         </div>
                     </div>
                 </article>
-
                 <article class="destinos-card cultural">
                     <div class="card-image">
                         <img src="assets/img/estambul.png" alt="Destino Cultural">
@@ -124,7 +126,7 @@
                 </article>
             </div>
         </section>
-        
+    <!-- Seccion TABLA DE PRECIOS -->
         <section class="snap-section tabla">
             <h2>Tabla de precios</h2>
 
@@ -169,7 +171,6 @@
                             <td data-label="Duración">8 días</td>
                             <td data-label="Precio">$2300</td>
                         </tr>
-                        
                         <tr>
                             <td data-label="Destino">Estambul</td>
                             <td data-label="País">Turquia</td>
@@ -280,6 +281,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;

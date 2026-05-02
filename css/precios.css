@@ -8,6 +8,7 @@
     text-align: center;
     font-size: 2.2rem;
 }
+
 /* TABLA DE PRECIOS */
 .tabla-container {
     width: 100%;
@@ -37,11 +38,9 @@
     color: var(--text-color);
     position: relative;
 }
-
 .tabla-precios tbody tr {
     transition: all 0.3s ease;
 }
-
 .tabla-precios tbody tr:hover {
     background: color-mix(in srgb, var(--accent) 45%, transparent);
     transform: scale(1.01);
@@ -51,7 +50,6 @@
     position: relative;
     cursor: help;
 }
-
 /* TEXTO TOOLTIP */
 .tabla-precios td[data-tooltip]::after {
     content: attr(data-tooltip);
@@ -70,12 +68,12 @@
     transition: 0.3s;
     z-index: 100;
 }
-
 .tabla-precios td[data-tooltip]:hover::after{
     opacity: 1;
     z-index: 100 !important;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .tabla-precios thead {
         display: none;

@@ -24,6 +24,8 @@
                 </div>
                 <span class="logo-texto">Trip Tour</span>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
             <nav class="nav">
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -59,14 +61,12 @@
                         <td data-label="Precio" data-tooltip="Precio por persona en base doble">$1200</td>
                         <td data-label="Incluye" data-tooltip="Incluye hotel, excursiones guiadas y traslados internos">Hotel + Tours</td>
                     </tr>
-
                     <tr>
                         <td data-label="Destino" data-tooltip="Destino turístico en el sudeste asiático">Palacio de Buda - Tailandia</td>
                         <td data-label="Duración" data-tooltip="Incluye actividades y excursiones">7 días</td>
                         <td data-label="Precio" data-tooltip="No incluye vuelos internacionales">$1800</td>
                         <td data-label="Incluye" data-tooltip="Incluye hotel, comidas y excursiones completas">All Inclusive</td>
                     </tr>
-
                     <tr>
                         <td data-label="Destino" data-tooltip="Destino de playa en América del Sur">Playa Ñuro - Perú</td>
                         <td data-label="Duración" data-tooltip="Estadía estándar sin excursiones">7 días</td>
@@ -195,6 +195,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;

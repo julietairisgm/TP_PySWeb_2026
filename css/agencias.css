@@ -20,6 +20,8 @@
     justify-content: center;
     margin-top: 40px;
 }
+
+/* CARDS DE AGENCIAS */
 .card-agencia {
     width: 250px;
     height: 320px;
@@ -78,6 +80,8 @@
     text-align: center;
     padding: 10px 0px;
 }
+
+/* SISTEMA DE RATING */
 .rating {
     display: flex;
     flex-direction: row-reverse;

@@ -24,6 +24,8 @@
                 </div>
                 <span class="logo-texto">Trip Tour</span>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
             <nav class="nav">
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -58,8 +60,8 @@
             <label for="playa" class="filter-label">🏖️ Playas</label>
         </div>
 
+    <!-- Seccion de BLOG -->
         <section class="snap-section blog">
-
         <!-- ARTÍCULO GRANDE (DESTACADO) -->
             <article class="post post--featured aventura">
                 <img src="assets/img/noruega.png" alt="">
@@ -114,7 +116,7 @@
                 </div>
             </article>
         </section>
-
+    <!-- Seccion de COMENTARIOS -->
         <section class="snap-section comentarios">
             <h2>Comentarios</h2>        
             <div class="comentario">
@@ -254,6 +256,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;
