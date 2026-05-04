@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
 }
-.precios h2 {
+.precios h1 {
     text-align: center;
     font-size: 2.2rem;
 }
@@ -23,6 +23,15 @@
     font-family: sans-serif;
     background: var(--surface);
 }
+.tabla-precios caption {
+    caption-side: top;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 10px;
+    margin-bottom: 20px;
+}
 .tabla-precios thead {
     background: var(--primary);
 }
@@ -30,7 +39,7 @@
     padding: 15px;
     text-align: left;
     font-weight: bold;
-    color: var(--bg-color);
+    color: var(--white);
 }
 .tabla-precios td {
     padding: 15px;
@@ -68,9 +77,24 @@
     transition: 0.3s;
     z-index: 100;
 }
-.tabla-precios td[data-tooltip]:hover::after{
+.tabla-precios td[data-tooltip]:hover::after,
+.tabla-precios td[data-tooltip]:focus-visible::after {
     opacity: 1;
     z-index: 100 !important;
+}
+
+.nav-link:focus-visible,
+button:focus-visible,
+input:focus-visible,
+td:focus-visible,
+logo:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+.slider-nav label:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 50%;
 }
 
 /* RESPONSIVE */

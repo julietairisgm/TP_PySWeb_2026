@@ -40,123 +40,128 @@
         </div>
     </header>
 
-    <main class=".snap-container">
-        <section class=".snap-section agencias">
-        <h2>Nuestras Agencias</h2>
+    <main class="snap-container">
+        <section class="snap-section agencias" aria-labelledby="titulo-agencias">
+        <h1 id="titulo-agencias">Nuestras Agencias</h1>
 
         <div class="contenedor-agencias">
-            <article class="card-agencia">
+            <article class="card-agencia" tabindex="0" role="button" aria-label="Ver información de la agencia La Frida">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="assets/img/agencia1.png" alt="Agencia">
+                        <img src="assets/img/agencia1.png" alt="Logo de la agencia La Frida">
                     </div>
                     <div class="card-back">
-                        <h3>La Frida</h3>
+                        <h2>La Frida</h2>
                         <p>Especialistas en viajes internacionales.</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-1" name="rating1" value="5">
-                            <label for="star5-1">★</label>
-                            <input type="radio" id="star4-1" name="rating1" value="4">
-                            <label for="star4-1">★</label>
-                            <input type="radio" id="star3-1" name="rating1" value="3">
-                            <label for="star3-1">★</label>
-                            <input type="radio" id="star2-1" name="rating1" value="2">
-                            <label for="star2-1">★</label>
-                            <input type="radio" id="star1-1" name="rating1" value="1">
-                            <label for="star1-1">★</label>
-                        </div>
+                        <fieldset class="rating">
+                            <legend>Calificación de la agencia La Frida</legend>
+                                <input type="radio" id="star5-1" name="rating1" value="5">
+                                <label for="star5-1">★</label>
+                                <input type="radio" id="star4-1" name="rating1" value="4">
+                                <label for="star4-1">★</label>
+                                <input type="radio" id="star3-1" name="rating1" value="3">
+                                <label for="star3-1">★</label>
+                                <input type="radio" id="star2-1" name="rating1" value="2">
+                                <label for="star2-1">★</label>
+                                <input type="radio" id="star1-1" name="rating1" value="1">
+                                <label for="star1-1">★</label>
+                        </fieldset>
                     </div>
                 </div>
             </article>
-            <article class="card-agencia">
+            <article class="card-agencia" tabindex="0" role="button" aria-label="Ver información de la agencia Horizontes">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="assets/img/agencia2.png" alt="Agencia">
+                        <img src="assets/img/agencia2.png" alt="Logo de la agencia Horizontes">
                     </div>
                     <div class="card-back">
-                        <h3>Horizontes</h3>
+                        <h2>Horizontes</h2>
                         <p>Transportando experiencias innovadoras.</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-2" name="rating2" value="5">
-                            <label for="star5-2">★</label>
-                            <input type="radio" id="star4-2" name="rating2" value="4">
-                            <label for="star4-2">★</label>
-                            <input type="radio" id="star3-2" name="rating2" value="3">
-                            <label for="star3-2">★</label>
-                            <input type="radio" id="star2-2" name="rating2" value="2">
-                            <label for="star-22">★</label>
-                            <input type="radio" id="star1-2" name="rating2" value="1">
-                            <label for="star1-2">★</label>
-                        </div>
+                        <fieldset class="rating">
+                            <legend>Calificación de la agencia Horizontes</legend>
+                                <input type="radio" id="star5-2" name="rating2" value="5" aria-label="5 estrellas">
+                                <label for="star5-2">★</label>
+                                <input type="radio" id="star4-2" name="rating2" value="4" aria-label="4 estrellas">
+                                <label for="star4-2">★</label>
+                                <input type="radio" id="star3-2" name="rating2" value="3" aria-label="3 estrellas">
+                                <label for="star3-2">★</label>
+                                <input type="radio" id="star2-2" name="rating2" value="2" aria-label="2 estrellas">
+                                <label for="star2-2">★</label>
+                                <input type="radio" id="star1-2" name="rating2" value="1" aria-label="1 estrellas">
+                                <label for="star1-2">★</label>
+                        </fieldset>
                     </div>
                 </div>
             </article>
-            <article class="card-agencia">
+            <article class="card-agencia" tabindex="0" role="button" aria-label="Ver información de la agencia La Sierra">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="assets/img/agencia3.png" alt="Agencia">
+                        <img src="assets/img/agencia3.png" alt="Logo de la agencia La Sierra">
                     </div>
                     <div class="card-back">
-                        <h3>La Sierra</h3>
+                        <h2>La Sierra</h2>
                         <p>Descubre el mundo con tu agencia de confianza.</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-3" name="rating3" value="5">
-                            <label for="star5-3">★</label>
-                            <input type="radio" id="star4-3" name="rating3" value="4">
-                            <label for="star4-3">★</label>
-                            <input type="radio" id="star3-3" name="rating3" value="3">
-                            <label for="star3-3">★</label>
-                            <input type="radio" id="star2-3" name="rating3" value="2">
-                            <label for="star2-3">★</label>
-                            <input type="radio" id="star1-3" name="rating3" value="1">
-                            <label for="star1-3">★</label>
-                        </div>
+                        <fieldset class="rating">
+                            <legend>Calificación de la agencia La Sierra</legend>
+                                <input type="radio" id="star5-3" name="rating3" value="5" aria-label="5 estrellas">
+                                <label for="star5-3">★</label>
+                                <input type="radio" id="star4-3" name="rating3" value="4" aria-label="4 estrellas">
+                                <label for="star4-3">★</label>
+                                <input type="radio" id="star3-3" name="rating3" value="3" aria-label="3 estrellas">
+                                <label for="star3-3">★</label>
+                                <input type="radio" id="star2-3" name="rating3" value="2" aria-label="2 estrellas">
+                                <label for="star2-3">★</label>
+                                <input type="radio" id="star1-3" name="rating3" value="1" aria-label="1 estrellas">
+                                <label for="star1-3">★</label>
+                        </fieldset>
                     </div>
                 </div>
             </article>
-            <article class="card-agencia">
+            <article class="card-agencia" tabindex="0" role="button" aria-label="Ver información de la agencia Alta Pinta">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="assets/img/agencia4.png" alt="Agencia">
+                        <img src="assets/img/agencia4.png" alt="Logo de la agencia Alta Pinta">
                     </div>
                     <div class="card-back">
-                        <h3>Alta Pinta</h3>
+                        <h2>Alta Pinta</h2>
                         <p>Tus viajes 100% especiales.</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-3" name="rating3" value="5">
-                            <label for="star5-3">★</label>
-                            <input type="radio" id="star4-3" name="rating3" value="4">
-                            <label for="star4-3">★</label>
-                            <input type="radio" id="star3-3" name="rating3" value="3">
-                            <label for="star3-3">★</label>
-                            <input type="radio" id="star2-3" name="rating3" value="2">
-                            <label for="star2-3">★</label>
-                            <input type="radio" id="star1-3" name="rating3" value="1">
-                            <label for="star1-3">★</label>
-                        </div>
+                        <fieldset class="rating">
+                            <legend>Calificación de la agencia Alta Pinta</legend>
+                                <input type="radio" id="star5-4" name="rating4" value="5" aria-label="5 estrellas">
+                                <label for="star5-4">★</label>
+                                <input type="radio" id="star4-4" name="rating4" value="4" aria-label="4 estrellas">
+                                <label for="star4-4">★</label>
+                                <input type="radio" id="star3-4" name="rating4" value="3" aria-label="3 estrellas">
+                                <label for="star3-4">★</label>
+                                <input type="radio" id="star2-4" name="rating4" value="2" aria-label="2 estrellas">
+                                <label for="star2-4">★</label>
+                                <input type="radio" id="star1-4" name="rating4" value="1" aria-label="1 estrellas">
+                                <label for="star1-4">★</label>
+                        </fieldset>
                     </div>
                 </div>
             </article>
-            <article class="card-agencia">
+            <article class="card-agencia" tabindex="0" role="button" aria-label="Ver información de la agencia Sunset">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="assets/img/agencia5.png" alt="Agencia">
+                        <img src="assets/img/agencia5.png" alt="Logo de la agencia Sunset">
                     </div>
                     <div class="card-back">
-                        <h3>Sunset</h3>
+                        <h2>Sunset</h2>
                         <p>Tus actividades no terminan ni aún con el ocaso.</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-3" name="rating3" value="5">
-                            <label for="star5-3">★</label>
-                            <input type="radio" id="star4-3" name="rating3" value="4">
-                            <label for="star4-3">★</label>
-                            <input type="radio" id="star3-3" name="rating3" value="3">
-                            <label for="star3-3">★</label>
-                            <input type="radio" id="star2-3" name="rating3" value="2">
-                            <label for="star2-3">★</label>
-                            <input type="radio" id="star1-3" name="rating3" value="1">
-                            <label for="star1-3">★</label>
-                        </div>
+                        <fieldset class="rating">
+                            <legend>Calificación de la agencia Sunset</legend>
+                                <input type="radio" id="star5-5" name="rating5" value="5" aria-label="5 estrellas">
+                                <label for="star5-5">★</label>
+                                <input type="radio" id="star4-5" name="rating5" value="4" aria-label="4 estrellas">
+                                <label for="star4-5">★</label>
+                                <input type="radio" id="star3-5" name="rating5" value="3" aria-label="3 estrellas">
+                                <label for="star3-5">★</label>
+                                <input type="radio" id="star2-5" name="rating5" value="2" aria-label="2 estrellas">
+                                <label for="star2-5">★</label>
+                                <input type="radio" id="star1-5" name="rating5" value="1" aria-label="1 estrellas">
+                                <label for="star1-5">★</label>
+                        </fieldset>
                     </div>
                 </div>
             </article>
@@ -167,11 +172,11 @@
     <footer class="footer">
         <div class="footer-container">
         <!--Formulario-->
-            <div class="footer-section">
-                <h3>SUSBRIBETE AL NEWSLETTER</h3>
+            <div class="footer-section" aria-labelledby="titulo-suscripcion">
+                <h2 id="titulo-suscripcion">SUSBRIBETE AL NEWSLETTER</h2>
                 <form class="form-content">
-                    <label>Recibe las mejores ofertas directamente en tu correo</label>
-                    <input type="email" placeholder="tu@email.com" required>
+                    <label for="email">Recibe las mejores ofertas directamente en tu correo</label>
+                    <input id="email" type="email" placeholder="tu@email.com" required>
                     <button class="btn btn-primary" type="submit">¡Suscribete!</button>
                 </form>
             </div>
@@ -251,10 +256,10 @@
                     </svg>
                 </a>
             </div>
-            <p>&copy; 2026 Todos los derechos reservados</p>
+            <span>&copy; 2026 Todos los derechos reservados</span>
             </div>
         <!--Mapa-->
-            <div class="footer-map">
+            <div class="footer-map" aria-label="Mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.14561023!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890" 
                     width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
@@ -281,5 +286,22 @@
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     </script>
+
+        <!-- SCRIPT PARA ACCESIBILIDAD POR TECLADO -->
+    <script>
+        document.querySelectorAll('.card-agencia').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.classList.toggle('flipped');
+            }
+        });
+    });
+    </script>
+
 </body>
 </html>

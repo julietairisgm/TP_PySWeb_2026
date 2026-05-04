@@ -41,85 +41,89 @@
     </header>
 
     <main class="snap-container">
-    <!-- Seccion DESTINOS -->
-        <section class="snap-section destinos">
-            <h2>Nuestros Destinos</h2>           
+    <!-- Seccion DESTINOS-->
+        <section class="destinos" aria-labelledby="titulo-destinos">
+            <h1 id="titulo-destinos">Nuestros Destinos</h1> 
+            
+            <fieldset class="filtros-destinos">
+                <legend>Filtrar destinos</legend>
 
-            <input type="radio" id="todos" name="filter" class="filter-input" checked>
-            <input type="radio" id="cultural" name="filter" class="filter-input">
-            <input type="radio" id="naturaleza" name="filter" class="filter-input">
-            <input type="radio" id="playa" name="filter" class="filter-input">
+                <input type="radio" id="todos" name="filter" class="filter-input" checked>
+                <input type="radio" id="cultural" name="filter" class="filter-input">
+                <input type="radio" id="naturaleza" name="filter" class="filter-input">
+                <input type="radio" id="playa" name="filter" class="filter-input">
 
-            <div class="menu-filtros">
-                <label for="todos" class="filter-label">🌟 Todos</label>
-                <label for="cultural" class="filter-label">🎭 Cultural</label>
-                <label for="naturaleza" class="filter-label">🌿 Naturaleza</label>
-                <label for="playa" class="filter-label">🏖️ Sol y Playa</label>
-            </div>
+                <div class="menu-filtros">
+                    <label for="todos" class="filter-label" tabindex="0">🌟 Todos</label>
+                    <label for="cultural" class="filter-label" tabindex="0">🎭 Cultural</label>
+                    <label for="naturaleza" class="filter-label" tabindex="0">🌿 Naturaleza</label>
+                    <label for="playa" class="filter-label" tabindex="0">🏖️ Sol y Playa</label>
+                </div>
+            </fieldset>
 
             <div class="galeria">
-                <article class="destinos-card cultural">
+                <article class="destinos-card cultural" tabindex="0" aria-label="Destino Palacio de Buda, categoría cultural">
                     <div class="card-image">
-                        <img src="assets/img/tailandia.png" alt="Destino Cultural">
+                        <img src="assets/img/tailandia.png" alt="Palacio de Buda en Tailandia">
                         <div class="card-overlay">
                             <div class="card-content">
-                                <h3>Palacio de Buda</h3>
+                                <h2>Palacio de Buda</h2>
                                 <p>Cultura y Tradición</p>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="destinos-card naturaleza">
+                <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Machu Pichu, categoría naturaleza">
                     <div class="card-image">
-                        <img src="assets/img/machupichu.png" alt="Destino Naturaleza">
+                        <img src="assets/img/machupichu.png" alt="Machu Pichu en Perú">
                         <div class="card-overlay">
                             <div class="card-content">
-                                <h3>Machu Pichu</h3>
-                                <p>Cultura y Tradición</p>
+                                <h2>Machu Pichu</h2>
+                                <p>Cultura y Naturaleza</p>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="destinos-card playa">
+                <article class="destinos-card playa" tabindex="0" aria-label="Playa Ñuro, categoría Sol y Playas">
                     <div class="card-image">
-                        <img src="assets/img/playa.png" alt="Destino Playa">
+                        <img src="assets/img/playa.png" alt="Playa Ñuro en Perú">
                         <div class="card-overlay">
                             <div class="card-content">
-                                <h3>Peru</h3>
+                                <h2>Playa Ñuro</h2>
                                 <p>Playas y tortugas</p>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="destinos-card cultural">
+                <article class="destinos-card cultural" tabindex="0" aria-label="Destino Estambul, categoría cultural">
                     <div class="card-image">
-                        <img src="assets/img/estambul.png" alt="Destino Cultural">
+                        <img src="assets/img/estambul.png" alt="Estambul en Turquia">
                         <div class="card-overlay">
                             <div class="card-content">
-                                <h3>Estambul</h3>
+                                <h2>Estambul</h2>
                                 <p>Cultura y Tradición</p>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="destinos-card naturaleza">
+                <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Islandia, categoría naturaleza">
                     <div class="card-image">
-                        <img src="assets/img/islandia.png" alt="Destino Naturaleza">
+                        <img src="assets/img/islandia.png" alt="Glaciar Vatnajökull en Islandia">
                         <div class="card-overlay">
                             <div class="card-content">
-                                <h3>Islandia</h3>
-                                <p>Cultura y Tradición</p>
+                                <h2>Islandia</h2>
+                                <p>Cultura y Naturaleza</p>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="destinos-card naturaleza">
+                <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Noruega, categoría naturaleza">
                     <div class="card-image">
-                        <img src="assets/img/noruega.png" alt="Destino Naturaleza">
+                        <img src="assets/img/noruega.png" alt="Tromso en Noruega">
                         <div class="card-overlay">
                             <div class="card-content">
-                                <h3>Noruega</h3>
-                                <p>Cultura y Tradición</p>
+                                <h2>Noruega</h2>
+                                <p>Cultura y Naturaleza</p>
                             </div>
                         </div>
                     </div>
@@ -127,17 +131,18 @@
             </div>
         </section>
     <!-- Seccion TABLA DE PRECIOS -->
-        <section class="snap-section tabla">
-            <h2>Tabla de precios</h2>
+        <section class="snap-section tabla" aria-labelledby="titulo-precios">
+            <h2 id="titulo-precios">Tabla de precios</h2>
 
-            <div class="tabla-container">
-                <table class="tabla-destinos">
+            <div class="tabla-container" tabindex="0" aria-label="Tabla de precios de destinos">
+                <table class="tabla-destinos" >
+                    <caption>Precios de destinos turísticos</caption>
                     <thead>
                         <tr>
-                            <th>Destino</th>
-                            <th>País</th>
-                            <th>Duración</th>
-                            <th>Precio</th>
+                            <th scope="col">Destino</th>
+                            <th scope="col">País</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Precio</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -186,11 +191,11 @@
     <footer class="footer">
         <div class="footer-container">
         <!--Formulario-->
-            <div class="footer-section">
-                <h3>SUSBRIBETE AL NEWSLETTER</h3>
+            <div class="footer-section" aria-labelledby="titulo-suscripcion">
+                <h2 id="titulo-suscripcion">SUSBRIBETE AL NEWSLETTER</h2>
                 <form class="form-content">
-                    <label>Recibe las mejores ofertas directamente en tu correo</label>
-                    <input type="email" placeholder="tu@email.com" required>
+                    <label for="email">Recibe las mejores ofertas directamente en tu correo</label>
+                    <input id="email" type="email" placeholder="tu@email.com" required>
                     <button class="btn btn-primary" type="submit">¡Suscribete!</button>
                 </form>
             </div>
@@ -270,10 +275,10 @@
                     </svg>
                 </a>
             </div>
-            <p>&copy; 2026 Todos los derechos reservados</p>
+            <span>&copy; 2026 Todos los derechos reservados</span>
             </div>
         <!--Mapa-->
-            <div class="footer-map">
+            <div class="footer-map" aria-label="Mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.14561023!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890" 
                     width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
@@ -298,6 +303,18 @@
             const isDark = root.classList.toggle("dark");
             toggle.textContent = isDark ? "☀️" : "🌙";
             localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+    </script>
+
+    <!-- SCRIPT PARA ACCESIBILIDAD POR TECLADO -->
+    <script>
+        document.querySelectorAll('.menu-filtros label').forEach(label => {
+            label.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    document.getElementById(label.getAttribute('for')).checked = true;
+                }
+            });
         });
     </script>
 </body>

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
 }
-.agencias h2 {
+.agencias h1 {
     text-align: center;
     padding: 40px 20px;
     font-size: 2.2rem;
@@ -24,9 +24,8 @@
 /* CARDS DE AGENCIAS */
 .card-agencia {
     width: 250px;
-    height: 320px;
+    height: 250px;
     perspective: 1000px;
-    border-radius: 2px solid var(--primary);
 }
 .card-inner {
     width: 100%;
@@ -36,6 +35,9 @@
     transition: transform 0.6s;
 }
 .card-agencia:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-agencia.flipped .card-inner {
     transform: rotateY(180deg);
 }
 .card-front,
@@ -68,13 +70,18 @@
 }
 .card-back {
     background: var(--primary);
-    color: var(--bg-color);
+    color: var(--white);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+.card-back h2 {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 1.5rem;
 }
 .card-back p {
     text-align: center;
@@ -86,21 +93,37 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 .rating input {
-    display: none;
+    position: absolute;
+    opacity: 0;
 }
 .rating label {
     font-size: 30px;
-    color: var(--text-color);
+    color: var(--white);
     cursor: pointer;
     transition: 0.3s;
 }
+.rating legend {
+    position: absolute;
+    opacity: 0;
+    display: none;
+}
 .rating label:hover,
 .rating label:hover ~ label {
-    color: var(--accent);
+    color: var(--white);
     transform: scale(1.2);
 }
 .rating input:checked ~ label {
     color: var(--rating-star);
+}
+
+.nav-link:focus-visible,
+.card-agencia:focus-visible,
+logo:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
 }

@@ -1,20 +1,28 @@
 :root{
-    --bg-color: #f4f4f4;
+    --bg-color: #f5f7f8;
     --text-color: #032c40;
-    --primary: #148d8d;
-    --accent: #efbc75;
+    --primary: #0f6f6f;
+    --primary-hover: #0b5c5c;
+    --accent: #c98a3a;
     --surface: #ffffff;
+    --surface-alt: #eef3f5;
     --white: #ffffff;
     --dark-footer: #021a26;
-    --rating-star: rgb(255, 200, 0);
+    --rating-star: #ffd166;
+    --number: #8a5a1f;
 }
 
 html.dark {
-    --bg-color: #0e2c40;
-    --text-color: #f4f4f4;
-    --primary: #c1e1a7;
-    --accent: #efbc75;
-    --surface: #1a4a5a;
+    --bg-color: #0b2230;
+    --text-color: #f2f6f8;
+    --primary: #1f7a73;
+    --primary-hover: #8ae6d9;
+    --accent: #e0a85a;
+    --surface: #153a4a;
+    --surface-alt: #1d4b5e;
+    --white: #ffffff;
+    --rating-star: #ffd166;
+    --number: #ffa639;
 }
 * {
     margin: 0;
@@ -36,6 +44,7 @@ body {
 /* SECCION HEADER */
 .header {
     background-color: var(--surface);
+    color: var(--text-color);
     top: 0;
 }
 .header-container {
@@ -54,12 +63,11 @@ body {
     cursor: pointer;
 }
 .logo-texto {
-    max-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    opacity: 0;
+    color: var(--text-color);
+    visibility: hidden;
     transform: translateX(-10px);
-    transition: all 0.4s ease;
+    white-space: nowrap;
+    transition: all 0.3s ease;
     font-family: "Georgia", serif;
     font-size: 1.2rem;
     font-weight: 700;
@@ -67,12 +75,13 @@ body {
 }
 .logo:hover .logo-texto {
     max-width: 200px;
-    opacity: 1;
+    visibility: visible;
     transform: translateX(0);
 }
 .logo:hover svg {
     transform: rotate(3deg) scale(1);
     transition: 0.3s;
+    fill: none;
 }
 .logo svg {
     transition: 0.3s;
@@ -99,7 +108,7 @@ body {
     position: relative;
 }
 .nav-link:hover {
-    color: var(--primary);
+    color: var(--primary-hover);
 }
 
 /* SNAP SCROLL*/
@@ -122,13 +131,21 @@ html {
     text-align: center;
     overflow: hidden;
     color: var(--white);
+    background: rgba(4, 22, 30, 0.85);
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 22, 30, 0.647);
+    z-index: 2;
 }
 .hero-video {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    z-index: 0;
 }
 .hero-overlay {
     position: absolute;
@@ -136,8 +153,8 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(4, 22, 30, 0.6); 
     z-index: 2;
+    inset: 0;
 }
 .hero-content {
     position: relative;
@@ -145,6 +162,7 @@ html {
     max-width: 800px;
     display: flex;
     flex-direction: column;
+    color: var(--white);
 }
 .hero-content h1 {    
     font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -152,6 +170,8 @@ html {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 800;
+    color: var(--white);
+    background-color: none;
 }
 .hero-content p {
     font-size: 1.2rem;
@@ -159,6 +179,7 @@ html {
     letter-spacing: 1px;
     max-width: 600px;
     margin: 10px auto;
+    color: var(--white);
 }
 
 /* SECCION MAIN */
@@ -175,7 +196,7 @@ html {
     color: var(--text-color);
     font-size: 2.5rem;
 }
-.destinos-content .destinos-grid {
+.destinos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -192,27 +213,34 @@ html {
     height: 500px;
 }
 .destinos-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px) scale(1.03);
     box-shadow: 0px 10px 20px var(--accent);
+}
+.card-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 .card-image img {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    display: block;
 }
-.destinos-card .card-overlay,
-.destinos-card .overlay {
+.card-overlay {
     position: absolute;
-    top: 0; 
-    left: 0;
     width: 100%; 
     height: 100%;
-    background: linear-gradient(to top, rgba(3, 44, 64, 0.9) 10%, rgba(3, 44, 64, 0.2) 50%, transparent 100%);
     display: flex;
     align-items: flex-end;
+    background: linear-gradient(to top, rgba(3, 44, 64, 0.95) 0%, rgba(3, 44, 64, 0.7) 20%, rgba(3, 44, 64, 0.3) 60%, transparent 100%);
 }
-.destinos-card .card-content,
-.destinos-card .info {
+.card-content{
+    position: relative;
     padding: 20px;
     width: 100%;
     display: flex;
@@ -227,25 +255,32 @@ html {
 .destinos-card p {
     font-size: 0.9rem;
 }
-.destinos-card .card-precio {
+.card-precio {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding-top: 10px;
-    color: #c1e1a7;
+    color: #dafdbd;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
+.card-link {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
 /* BOTON PRINCIPAL */
 .btn-primary {
     background-color: var(--accent);
-    color: #032c40;
+    color: var(--text-color);
     border: none;
     padding: 10px 20px;
     border-radius: 7px;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
 }
 .btn-primary:hover {
     filter: brightness(1.3);
@@ -266,16 +301,16 @@ html {
     margin-top: 20px;
     font-size: 1.5rem;
     letter-spacing: 2px;
-    opacity: 0.8;
+    opacity: 1;
     color: var(--text-color);
 }
-.stats span {
+.stats > span {
     margin-top: 30px;
     font-size: 2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     opacity: 0.8;
-    color: var(--accent);
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 .stat-container {
@@ -294,13 +329,13 @@ html {
 .counter-numbers span {
     font-size: 6rem;
     font-weight: 800;
-    color: var(--accent);
+    color: var(--number);
     line-height: 80px;
     height: 80px;
 }
 @keyframes subir-contador {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-1330px); }
+    100% { transform: translateY(-800px); }
 }    
 
 /* SECCION TESTIMONIOS */
@@ -318,10 +353,10 @@ html {
     color: var(--text-color);
     font-size: 2.5rem;
 }
-.testimonios h3 {
-    margin-top: 40px;
+.cta-texto {
+    margin-top: 60px;
     font-size: 2rem;
-    color: var(--accent);
+    color: var(--text-color);
 }
 .slider-container {
     max-width: 600px;
@@ -331,7 +366,10 @@ html {
     padding: 20px;
 }
 .slider-container input[type="radio"] { 
-    display: none; 
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 .slides {
     display: flex;
@@ -366,6 +404,7 @@ html {
     cursor: pointer;
     opacity: 0.4;
     transition: 0.3s;
+    display: inline-block;
 }
 #slide1:checked ~ .slider-nav label[for="slide1"],
 #slide2:checked ~ .slider-nav label[for="slide2"],
@@ -373,6 +412,15 @@ html {
     opacity: 1;
     background-color: var(--accent);
     transform: scale(1.3);
+}
+.slider-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.slider-fieldset legend {
+    position: absolute;
+    left: -9999px;
 }
 
 /* SECCION FOOTER */
@@ -389,7 +437,7 @@ html {
     gap: 40px;
     align-items: center;
 }
-.footer-container h3 {
+.footer-container h2 {
     color: var(--accent);
     margin-bottom: 20px;
     font-size: 1.4rem;
@@ -449,6 +497,7 @@ html {
 /* BOTON PARA CAMBIO DE TEMA */
 .modo-btn {
     background: none;
+    color: var(--text-color);
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
@@ -468,6 +517,21 @@ html {
     font-size: 2rem;
     cursor: pointer;
     display: none;
+}
+
+.nav-link:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible,
+logo:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+.slider-nav label:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 50%;
 }
 
 /* RESPONSIVE */
