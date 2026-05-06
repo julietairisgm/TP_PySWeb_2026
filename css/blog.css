@@ -268,11 +268,13 @@ logo:focus-visible {
 @media (max-width: 600px) {
     .blog {
         grid-template-columns: 1fr;
+        grid-auto-rows: auto; 
     }
 
     .post--featured,
     .post--wide,
     .post {
         grid-column: span 1;
+        grid-row: auto;
     }
 }
