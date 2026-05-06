@@ -248,6 +248,11 @@ logo:focus-visible {
         font-weight: bold;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--primary);
+        color: var(--primary-hover);
+    }
+    .tabla-destinos caption {
+        display: block;
+        caption-side: top;
+        margin: 10px;
     }
 }
