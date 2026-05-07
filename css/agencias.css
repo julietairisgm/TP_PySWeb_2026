@@ -10,7 +10,7 @@
     font-size: 2.2rem;
     margin-top: 40px;
 }
-.contenedor-agencias {
+/*.contenedor-agencias {
     max-width: 1200px; 
     margin: 0 auto;
     padding: 20px 60px;
@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
-}
+}*/
 
 /* CARDS DE AGENCIAS */
 .card-agencia {

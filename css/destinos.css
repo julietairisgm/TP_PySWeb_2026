@@ -129,6 +129,9 @@ h1 {
 .destinos-card:hover .card-content {
     transform: translateY(0);
 }
+.destino-item {
+    grid-row-end: span 15; /* base */
+}
 
 /* TABLA DE DESTINOS */
 .destinos {
@@ -140,13 +143,13 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-.tabla-container {
+/*.tabla-container {
     width: 100%;
     overflow-x: auto;
     max-width: 1500px;
     margin: 40px auto;
     padding: 0 20px;
-}
+}*/
 .tabla-destinos caption {
     caption-side: top;
     text-align: center;
@@ -156,14 +159,14 @@ h1 {
     padding: 10px;
     margin-bottom: 20px;
 }
-.tabla-destinos{
+/*.tabla-destinos{
     width: 100%;
     border-collapse: collapse;
     font-family: sans-serif;
     background: var(--surface);
     border-radius: 10px;
     overflow: hidden;
-}
+}*/
 .tabla-destinos thead {
     background: var(--primary);
 }
