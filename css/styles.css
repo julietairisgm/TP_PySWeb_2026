@@ -82,12 +82,12 @@ body {
 
     --bs-border-color: #295061;
 }
-/* ========================================= */
+
+/* =================== HERO ====================== */
 
 .hero-content * {
     color: white !important;
 }
-
 #heroTitle{
     opacity: 0;
 }
@@ -95,10 +95,15 @@ body {
     min-height: 40px;
 }
 
-.testimonios {
-    background-color: var(--surface-alt);
-}
+/* ==================== CARRUSEL ===================== */
 
+.testimonios {
+    background-color: var(--bg-color);
+}
+.testimonios h2 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+}
 .testimonio-card {
     max-width: 800px;
     padding: 3rem 2rem;
@@ -107,36 +112,32 @@ body {
     border: 1px solid var(--bs-border-color);
     box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
-
 .testimonio-card p {
     font-size: 1.2rem;
     line-height: 1.8;
 }
-
 .testimonio-card i {
     color: var(--accent);
     margin-right: 8px;
 }
-
 .carousel-indicators [data-bs-target] {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: var(--accent);
 }
-
 .carousel-control-prev,
 .carousel-control-next {
     filter: brightness(0);
 }
-
 [data-bs-theme="dark"]
 .carousel-control-prev,
 [data-bs-theme="dark"]
 .carousel-control-next {
     filter: brightness(0) invert(1);
 }
-/* ========================================= */
+
+/* =================== NAVBAR ====================== */
 
 /* NAVBAR */
 .navbar {
@@ -159,7 +160,45 @@ body {
     border-radius: 12px;
 }
 
+/* ==================== CONTADOR ===================== */
+.stats {
+    background-color: var(--surface);
+    padding: 6rem 1rem;
+    font-size: 2rem;
+}
 
+.counter-box {
+    max-width: 800px;
+    margin: auto;
+}
+
+.stats-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.stats-title i {
+    margin-right: 10px;
+    color: var(--accent);
+}
+
+.stats p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-inline: auto;
+    opacity: 0.90;
+}
+.counter-numbers span {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--number);
+    line-height: 80px;
+    height: 80px;
+}
+
+/* ========================================= */
 /* CARDS */
 .card {
     border: 1px solid var(--bs-border-color);
@@ -385,141 +424,8 @@ html {
     filter: brightness(1.3);
 }
 
-/* SECCION CONTADOR ANIMADO */
-.stats {
-    padding: 50px;
-    background-color: var(--surface);
-    text-align: center;
-    font-size: 2rem;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-}
-.stats p {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    opacity: 1;
-    color: var(--text-color);
-}
-.stats > span {
-    margin-top: 30px;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0.8;
-    color: var(--text-color);
-    margin-bottom: 20px;
-}
-.stat-container {
-    height: 80px;
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-.counter-numbers {
-    display: flex;
-    flex-direction: column;
-    animation: subir-contador 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
-}
-.counter-numbers span {
-    font-size: 6rem;
-    font-weight: 800;
-    color: var(--number);
-    line-height: 80px;
-    height: 80px;
-}
-@keyframes subir-contador {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-800px); }
-}    
 
-/* SECCION TESTIMONIOS */
-.testimonios {
-    padding: 80px 0;
-    background-color: var(--bg-color);
-    text-align: center;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-}
-.testimonios h2 {
-    color: var(--text-color);
-    font-size: 2.5rem;
-}
-.cta-texto {
-    font-size: 2rem;
-    color: var(--text-color);
-}
-.slider-container {
-    max-width: 600px;
-    overflow: hidden;
-    position: relative;
-    padding: 20px;
-}
-.slider-container input[type="radio"] { 
-    position: absolute;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-}
-.slides {
-    display: flex;
-    width: 300%;
-    transition: transform 0.5s ease-in-out;
-}
-.testimonio-card {
-    width: 100%;
-    background: var(--surface);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    margin: 0 10px;
-    box-sizing: border-box;
-}
-/* Lógica de movimiento carrusel */
-#slide1:checked ~ .slides { transform: translateX(0); }
-#slide2:checked ~ .slides { transform: translateX(-33.33%); }
-#slide3:checked ~ .slides { transform: translateX(-66.66%); }
 
-.slider-nav {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-.slider-nav label {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    cursor: pointer;
-    opacity: 0.4;
-    transition: 0.3s;
-    display: inline-block;
-    position: relative;
-    z-index: 10;
-}
-#slide1:checked ~ .slider-nav label[for="slide1"],
-#slide2:checked ~ .slider-nav label[for="slide2"],
-#slide3:checked ~ .slider-nav label[for="slide3"] {
-    opacity: 1;
-    background-color: var(--accent);
-    transform: scale(1.3);
-}
-.slider-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-.slider-fieldset legend {
-    position: absolute;
-    left: -9999px;
-}
 
 /* SECCION FOOTER */
 .footer {
