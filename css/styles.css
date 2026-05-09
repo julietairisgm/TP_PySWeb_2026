@@ -88,6 +88,14 @@ body {
     color: white !important;
 }
 
+#heroTitle{
+    opacity: 0;
+}
+#typingText {
+    min-height: 40px;
+}
+/* ========================================= */
+
 /* NAVBAR */
 .navbar {
     background-color: var(--surface) !important;

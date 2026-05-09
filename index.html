@@ -84,8 +84,9 @@
             
             <div class="container">
                 <div class="hero-content mx-auto text-center d-flex flex-column align-items-center justify-content-center">
-                    <h1 class="mb-3">Explora Destinos Increíbles</h1>
-                    <p class="lead">Tu próxima aventura comienza aquí.</p>
+                    <h1 class="mb-3" id="heroTitle">Explora Destinos Increíbles</h1>
+                    <!--<p class="lead" id="heroText">Tu próxima aventura comienza aquí.</p>-->
+                    <p id="typingText"></p>
                 </div>
             </div>
         </section>
@@ -277,6 +278,7 @@
     </footer>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
@@ -302,6 +304,44 @@
             localStorage.setItem("theme", newTheme);
     
             toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#heroTitle")
+                .delay(400)
+                .animate({
+                    opacity: 1
+                },
+                {
+                    duration: 1400,
+                    step: function(now) {
+                        const y = 40 - (now * 40);
+                        $(this).css(
+                            "transform",
+                            `translateY(${y}px)`
+                        );
+                    }
+                }
+            );
+
+        const texto = "Tu próxima aventura comienza aquí";
+        let i = 0;
+        function escribirTexto() {
+            $("#typingText").css("opacity", "1");
+            const typing = setInterval(() => {
+                $("#typingText").append(texto.charAt(i));
+                i++;
+                if (i >= texto.length) {
+                    clearInterval(typing);
+                }
+            }, 55);
+        }
+
+        setTimeout(() => {
+            escribirTexto();
+        }, 1800);
         });
     </script>
 
