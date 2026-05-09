@@ -94,6 +94,48 @@ body {
 #typingText {
     min-height: 40px;
 }
+
+.testimonios {
+    background-color: var(--surface-alt);
+}
+
+.testimonio-card {
+    max-width: 800px;
+    padding: 3rem 2rem;
+    background-color: var(--surface);
+    border-radius: 24px;
+    border: 1px solid var(--bs-border-color);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.testimonio-card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.testimonio-card i {
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: brightness(0);
+}
+
+[data-bs-theme="dark"]
+.carousel-control-prev,
+[data-bs-theme="dark"]
+.carousel-control-next {
+    filter: brightness(0) invert(1);
+}
 /* ========================================= */
 
 /* NAVBAR */

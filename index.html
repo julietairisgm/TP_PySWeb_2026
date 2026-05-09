@@ -172,39 +172,69 @@
             <p>Más de 1000 personas eligen nuestros servicios para sus viajes.</p>
             <p>Y tu, ¿qué esperas para disfrutar de tus proximas vacaciones?</p>
         </section>
+
     <!--Seccion de TESTIMONIOS-->
-        <section class="snap-section testimonios">
+        <section class="snap-section testimonios py-5">
             <div class="container">
-            <h2 class="text-center mb-5">Conoce los testimonios de nuestros viajeros</h2>
-            
-                <div class="slider-container mx-auto text-center" aria-label="Testimonios de usuarios">
-                    <fieldset class="slider-fieldset">
-                        <legend>Seleccionar testimonio</legend>
-                        <input type="radio" name="slider" id="slide1" checked>
-                        <input type="radio" name="slider" id="slide2">
-                        <input type="radio" name="slider" id="slide3">
-                    
-                        <div class="slides">
-                            <article class="testimonio-card">
-                                <p><i class="fa-solid fa-comments"></i> "Una experiencia inolvidable. El servicio fue impecable."</p>
-                                <h3>- Juan Pérez</h3>
-                            </article>
-                            <article class="testimonio-card">
-                                <p><i class="fa-solid fa-comments"></i> "La mejor agencia para conocer el norte argentino."</p>
-                                <h3>- María García</h3>
-                            </article>
-                            <article class="testimonio-card">
-                                <p><i class="fa-solid fa-comments"></i> "Logística perfecta y paisajes que te quitan el aliento."</p>
-                                <h3>- Carlos Ruiz</h3>
-                            </article>
+                <h2 class="text-center mb-5">Conoce los testimonios de nuestros viajeros</h2>
+                
+                <!-- CAROUSEL -->
+                <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                
+                    <!-- INDICADORES -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonio 1"></button>
+                        <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="1" aria-label="Testimonio 2"></button>
+                        <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
+                    </div>
+
+
+                    <!-- SLIDES -->
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="testimonio-card text-center mx-auto">
+                                <p class="mb-4">
+                                    <i class="fa-solid fa-comments"></i>
+                                    "Una experiencia inolvidable. El servicio fue impecable."
+                                </p>
+                                <h3 class="h5">— Juan Pérez</h3>
+                            </div>
                         </div>
-                        <div class="slider-nav">
-                            <label for="slide1" tabindex="0" role="button" aria-label="Ver testimonio 1"></label>
-                            <label for="slide2" tabindex="0" role="button" aria-label="Ver testimonio 2"></label>
-                            <label for="slide3" tabindex="0" role="button" aria-label="Ver testimonio 3"></label>
+
+                        <div class="carousel-item">
+                            <div class="testimonio-card text-center mx-auto">
+                                <p class="mb-4">
+                                    <i class="fa-solid fa-comments"></i>
+                                    "La mejor agencia para conocer el norte argentino."
+                                </p>
+                                <h3 class="h5">— María García</h3>
+                            </div>
                         </div>
-                    </fieldset>
-                </div> 
+
+                        <div class="carousel-item">
+                            <div class="testimonio-card text-center mx-auto">
+                                <p class="mb-4">
+                                    <i class="fa-solid fa-comments"></i>
+                                    "Logística perfecta y paisajes que te quitan el aliento."
+                                </p>
+                                <h3 class="h5">— Carlos Ruiz</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- BOTÓN PREV -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                <!-- BOTÓN NEXT -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+ 
                 <h3 class="cta-texto text-center mt-5">¿Qué esperas para sumarte a ellos?</h3>
                 </div>
             </section> 
@@ -306,7 +336,8 @@
             toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
         });
     </script>
-
+    
+    <!-- SCRIPT PARA LA ANIMACION DEL HERO -->
     <script>
         $(document).ready(function () {
             $("#heroTitle")
