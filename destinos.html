@@ -176,57 +176,86 @@
             </div>
         </section>
     <!-- Seccion TABLA DE PRECIOS -->
-        <section class="snap-section tabla" aria-labelledby="titulo-precios">
+        <section class="snap-section precios" aria-labelledby="titulo-precios">
             <div class="container">
-                <h2 id="titulo-precios" class="text-center mb-4">Tabla de precios</h2>
+                <h2 id="titulo-precios" class="text-center mt-5 mb-4">Paquetes más solicitados</h2>
 
-            <div class="table-container" tabindex="0" aria-label="Tabla de precios de destinos">
+            <div class="table-responsive" tabindex="0" aria-label="Tabla de precios de destinos">
                 <table class="table table-striped table-hover table-bordered table-sm align-middle tabla-destinos" >
                     <caption class="text-center mb-2">Precios de destinos turísticos</caption>
-                    <thead class="table-dark">
+                    <thead>
                         <tr>
+                            <th scope="col">#</th>
                             <th scope="col">Destino</th>
                             <th scope="col">País</th>
                             <th scope="col">Duración</th>
                             <th scope="col">Precio</th>
+                            <th scope="col">Clima</th>
+                            <th scope="col">Temporada</th>
+                            <th scope="col">Excursiones Incluidas</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-group-divider">
                         <tr>
+                            <th scope="row">1</th>
                             <td data-label="Destino">Machu Picchu</td>
                             <td data-label="País">Perú</td>
-                            <td data-label="Duración">5 días</td>
+                            <td data-label="Duración">7 días</td>
                             <td data-label="Precio">$1200</td>
+                            <td data-label="Clima">Tropical</td>
+                            <td data-label="Temporada">Media</td>
+                            <td>Tour guiado + trekking a las ruinas Incas</td>
                         </tr>
                         <tr>
+                            <th scope="row">2</th>
                             <td data-label="Destino">Palacio de Buda</td>
                             <td data-label="País">Tailandia</td>
                             <td data-label="Duración">7 días</td>
                             <td data-label="Precio">$1800</td>
+                            <td data-label="Clima">Templado</td>
+                            <td data-label="Temporada">Media</td>
+                            <td>Tour guiado + Placio de Buda</td>
                         </tr>
                         <tr>
+                            <th scope="row">3</th>
                             <td data-label="Destino">Playa Ñuro</td>
                             <td data-label="País">Perú</td>
                             <td data-label="Duración">7 días</td>
                             <td data-label="Precio">$1000</td>
+                            <td data-label="Clima">Tropical</td>
+                            <td data-label="Temporada">Baja</td>
+                            <td>Tour guiado + paseo en barco</td>
+
                         </tr>
                         <tr>
+                            <th scope="row">4</th>
                             <td data-label="Destino">Tromso</td>
                             <td data-label="País">Noruega</td>
-                            <td data-label="Duración">8 días</td>
-                            <td data-label="Precio">$2000</td>
+                            <td data-label="Duración">10 días</td>
+                            <td data-label="Precio">$3000</td>
+                            <td data-label="Clima">Frío</td>
+                            <td data-label="Temporada">Media</td>
+                            <td>Tour guiado + trekking por las montañas + Tour nocturno</td>
                         </tr>
                         <tr>
+                            <th scope="row">5</th>
                             <td data-label="Destino">Glaciar Vatnajökull</td>
                             <td data-label="País">Islandia</td>
-                            <td data-label="Duración">8 días</td>
-                            <td data-label="Precio">$2300</td>
+                            <td data-label="Duración">10 días</td>
+                            <td data-label="Precio">$3000</td>
+                            <td data-label="Clima">Frío</td>
+                            <td data-label="Temporada">Alta</td>
+                            <td>Tour guiado + trekking por los glaciares + Tour nocturno</td>
                         </tr>
                         <tr>
+                            <th scope="row">6</th>
                             <td data-label="Destino">Estambul</td>
                             <td data-label="País">Turquia</td>
                             <td data-label="Duración">10 días</td>
                             <td data-label="Precio">$3000</td>
+                            <td data-label="Clima">Templado</td>
+                            <td data-label="Temporada">Alta</td>
+                            <td>Tour guiado + Palacio del Sultán</td>
                         </tr>
                     </tbody>
                 </table>
@@ -332,6 +361,7 @@
         });
     </script>
 
+    <!-- SCRIPT PARA FILTROS -->
     <script>
         $(document).ready(function () {
             $(".filtro-btn").click(function () {
@@ -356,6 +386,7 @@
         });
     </script>
 
+    <!-- SCRIPT PARA EFECTO ZOOM -->
     <script>
         $(document).ready(function () {
             $(".destinos-card").hover(

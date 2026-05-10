@@ -1,3 +1,7 @@
+.table-responsive {
+    border-radius: 12px;
+    overflow: hidden;
+}
 .table caption {
     caption-side: top;
 }
