@@ -1,58 +1,16 @@
-
-.precios h1 {
-    text-align: center;
-    font-size: 2.2rem;
-}
-
-/* TABLA DE PRECIOS */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    max-width: 1500px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.tabla-precios{
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-    background: var(--surface);
-}
-.tabla-precios caption {
+.table caption {
     caption-side: top;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--text-color);
-    padding: 10px;
-    margin-bottom: 20px;
 }
-.tabla-precios thead {
-    background: var(--primary);
-}
+
 .tabla-precios th {
-    padding: 15px;
-    text-align: left;
-    font-weight: bold;
     color: white;
     background-color: var(--bs-primary);
-}
-.tabla-precios td {
-    padding: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    color: var(--text-color);
-    position: relative;
-}
-.tabla-precios tbody tr {
-    transition: all 0.3s ease;
 }
 
 .tabla-precios tbody tr:hover td {
     background-color: var(--accent);
     transition: all 0.3s ease;
     color: var(--bg-color);
-    font-weight: 400;
 }
 
 .nav-link:focus-visible,
@@ -67,55 +25,4 @@ logo:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 4px;
     border-radius: 50%;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .tabla-precios thead {
-        display: none;
-    }
-
-    .tabla-precios,
-    .tabla-precios tbody,
-    .tabla-precios tr,
-    .tabla-precios td {
-        display: block;
-        width: 100%;
-    }
-
-    .tabla-precios tr {
-        margin-bottom: 20px;
-        background: var(--surface);
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    .tabla-precios td {
-        padding-left: 50%;
-        text-align: right;
-        position: relative;
-    }
-
-    .tabla-precios td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 15px;
-        font-weight: bold;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--primary-hover);
-    }
-    .tabla-precios td[data-tooltip]::after {
-        bottom: auto;
-        top: 110%;
-        left: 10px;
-        transform: none;
-        white-space: normal;
-        max-width: 200px;
-    }
-    .tabla-precios caption {
-        display: block;
-        caption-side: top;
-        margin: 10px;
-    }
 }
