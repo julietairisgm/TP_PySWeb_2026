@@ -79,179 +79,166 @@
             <h1 id="titulo-blog">Blog de Destinos</h1>
             <p>Explora los artículos de nuestros viajes a los destinos de ensueño</p>
         </section>
-        <!--<fieldset class="grupo-filtros">
-            <legend class="sr-only">Filtrar artículos del blog</legend>
-                <input type="radio" id="todos" name="filter" class="filter-input" checked aria-label="Mostrar todos los artículos">
-                <input type="radio" id="cultura" name="filter" class="filter-input" aria-label="Filtrar por cultura">
-                <input type="radio" id="aventura" name="filter" class="filter-input" aria-label="Filtrar por aventura">
-                <input type="radio" id="gastronomia" name="filter" class="filter-input" aria-label="Filtrar por gastronomía">
-                <input type="radio" id="playa" name="filter" class="filter-input" aria-label="Filtrar por playas">
 
-            <div class="menu-filtros" aria-label="Filtrar artículos del blog">
-                <label for="todos" class="filter-label" tabindex="0" aria-label="Mostrar todos los artículos">🌟 Todos</label>
-                <label for="cultura" class="filter-label" tabindex="0" aria-label="Mostrar por cultura">🎭 Cultura</label>
-                <label for="aventura" class="filter-label" tabindex="0" aria-label="Mostrar por aventura">🌿 Aventura</label>
-                <label for="gastronomia" class="filter-label" tabindex="0" aria-label="Mostrar por gastronomía">🥗 Gastronomia</label>
-                <label for="playa" class="filter-label" tabindex="0" aria-label="Mostrar por playas">🏖️ Playas</label>
-            </div>-->
-            <!-- FILTROS -->
+            <!-- FILTROS --> 
                 <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
                     <button class="btn btn-outline-primary filtro-btn active" data-filter="all">🌟 Todos</button>
-                    <button class="btn btn-outline-primary filtro-btn" data-filter="cultural">🎭 Cultura</button>
+                    <button class="btn btn-outline-primary filtro-btn" data-filter="cultura">🎭 Cultura</button>
                     <button class="btn btn-outline-primary filtro-btn" data-filter="aventura">🌿 Aventura</button>
                     <button class="btn btn-outline-primary filtro-btn" data-filter="gastronomia">🥗 Gastronomia</button>
                     <button class="btn btn-outline-primary filtro-btn" data-filter="playa">🏖️ Playas</button>
                 </div>
 
-        <!-- Seccion de BLOG -->
-            <section class="snap-section blog py-5">
-                <div class="container">
-                <h2 class="sr-only text-center mb-4">Artículos del blog</h2>
+            <!-- Seccion de BLOG -->
+                <section class="snap-section blog py-5">
+                    <div class="container">
+                    <h2 class="sr-only text-center mb-4">Artículos del blog</h2>
 
-                <div class="row g-4">
+                    <div class="row g-4">
 
-            <!-- ARTÍCULO GRANDE (DESTACADO) -->
-                <div class="col-12 col-lg-8 d-flex">
-                <article class="post post--featured aventura" tabindex="0" aria-label="Artículo destacado: Destino imperdible en Noruega, categoría aventura">
-                    <img src="assets/img/noruega.png" alt="Paisaje montañoso en Noruega">
-                    <div class="content">
-                        <h3>Destino Imperdible en Noruega</h3>
-                        <p>Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.
-                        Qué es lo que hace que Noruega sea uno de los lugares más visitados por los turistas?
-                        Nuesta agente de turismo, Vivian Medrano, nos cuenta todo lo que debes saber si quiere conocer este precioso lugar.
-                        </p>
-                    </div>
-                </article>
-                </div>
+                    <!-- ARTÍCULO GRANDE (DESTACADO) -->
+                        <div class="col-12 col-lg-8 d-flex">
+                            <article class="post post--featured aventura" tabindex="0" aria-label="Artículo destacado: Destino imperdible en Noruega, categoría aventura">
+                                <img src="assets/img/noruega.png" alt="Paisaje montañoso en Noruega">
+                                <div class="content">
+                                    <h3>Destino Imperdible en Noruega</h3>
+                                    <p>Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.
+                                    Qué es lo que hace que Noruega sea uno de los lugares más visitados por los turistas?
+                                    Nuesta agente de turismo, Vivian Medrano, nos cuenta todo lo que debes saber si quiere conocer este precioso lugar.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
 
-            <!-- ARTÍCULO MEDIO -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <article class="post aventura" tabindex="0" aria-label="Artículo: Aventura Inca, categoría aventura">
-                    <img src="assets/img/machupichu.png" alt="Ruinas de Machu Picchu en Perú">
-                    <div class="content">
-                        <h3>Aventura Inca</h3>
-                        <p>Trekking a través de la historia.</p>
-                    </div>
-                </article>
-                </div>
+                    <!-- ARTÍCULO MEDIO -->
+                        <div class="col-12 col-md-6 col-lg-4 d-flex">
+                            <article class="post aventura" tabindex="0" aria-label="Artículo: Aventura Inca, categoría aventura">
+                                <img src="assets/img/machupichu.png" alt="Ruinas de Machu Picchu en Perú">
+                                <div class="content">
+                                    <h3>Aventura Inca</h3>
+                                    <p>Trekking a través de la historia.</p>
+                                </div>
+                            </article>
+                        </div>
 
-            <!-- ARTÍCULO MEDIO -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <article class="post playa" tabindex="0" aria-label="Artículo: Playas que conectan, categoría playa">
-                    <img src="assets/img/playa.png" alt="Turtugar de mar nadando en las Playas Ñuro">
-                    <div class="content">
-                        <h3>Playas que conectan</h3>
-                        <p>¿Te imaginas tener la compañia de uno de los animales más longevos del mundo?</p>
-                    </div>
-                </article>
-                </div>
+                    <!-- ARTÍCULO MEDIO -->
+                        <div class="col-12 col-md-6 col-lg-4 d-flex">
+                            <article class="post playa" tabindex="0" aria-label="Artículo: Playas que conectan, categoría playa">
+                                <img src="assets/img/playa.png" alt="Turtugar de mar nadando en las Playas Ñuro">
+                                <div class="content">
+                                    <h3>Playas que conectan</h3>
+                                    <p>¿Te imaginas tener la compañia de uno de los animales más longevos del mundo?</p>
+                                </div>
+                            </article>
+                        </div>
 
-                <!-- ARTÍCULO PEQUEÑO -->
-                <div class="col-12 col-md-4 col-lg-2 d-flex">
-                <article class="post post--small cultura col-6 col-md-3" tabindex="0" aria-label="Artículo: Cultura y tradiciones, categoría cultura">
-                    <h3>Cultura y tradiciones</h3>
-                </article>
-                </div>
+                    <!-- ARTÍCULO PEQUEÑO -->
+                        <div class="col-12 col-md-4 col-lg-2 d-flex">
+                            <article class="post post--small cultura col-6 col-md-3" tabindex="0" aria-label="Artículo: Cultura y tradiciones, categoría cultura">
+                                <h3>Cultura y tradiciones</h3>
+                            </article>
+                        </div>
 
-            <!-- ARTÍCULO GRANDE SECUNDARIO -->
-                <div class="col-12 col-md-8 col-lg-6 d-flex">
-                <article class="post post--wide cultura" tabindex="0" aria-label="Artículo: Ruta lleno de espiritualidad, categoría cultura">
-                    <img src="assets/img/tailandia.png" alt="Estatua de Buda en el Palacio de Buda">
-                    <div class="content">
-                        <h3>Ruta lleno de espiritualidad</h3>
-                        <p>Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
-                    </div>
-                </article>
-                </div>
+                    <!-- ARTÍCULO GRANDE SECUNDARIO -->
+                        <div class="col-12 col-md-8 col-lg-6 d-flex">
+                            <article class="post post--wide cultura" tabindex="0" aria-label="Artículo: Ruta lleno de espiritualidad, categoría cultura">
+                                <img src="assets/img/tailandia.png" alt="Estatua de Buda en el Palacio de Buda">
+                                <div class="content">
+                                    <h3>Ruta lleno de espiritualidad</h3>
+                                    <p>Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
+                                </div>
+                            </article>
+                        </div>
                 
-            <!-- ARTÍCULO GRANDE SECUNDARIO -->
-                <div class="col-12 col-md-8 col-lg-8 d-flex">
-                <article class="post post--wide aventura" tabindex="0" aria-label="Artículo: Encontrando las auroras, categoría aventura">
-                    <img src="assets/img/islandia.png" alt="Glaciares de Islandia">
-                    <div class="content">
-                        <h3>Encontrando las auroras</h3>
-                        <p>Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.
-                        Glaciares, auroras voreales, y nieve. Si eres fanatico del invierno, debes leer esto.
-                        </p>
+                    <!-- ARTÍCULO GRANDE SECUNDARIO -->
+                        <div class="col-12 col-md-8 col-lg-8 d-flex">
+                            <article class="post post--wide aventura" tabindex="0" aria-label="Artículo: Encontrando las auroras, categoría aventura">
+                                <img src="assets/img/islandia.png" alt="Glaciares de Islandia">
+                                <div class="content">
+                                    <h3>Encontrando las auroras</h3>
+                                    <p>Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.
+                                    Glaciares, auroras voreales, y nieve. Si eres fanatico del invierno, debes leer esto.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                    <!-- ARTÍCULO PEQUEÑO -->
+                        <div class="col-12 col-md-4 col-lg-4 d-flex">
+                            <article class="post post--small gastronomia" tabindex="0" aria-label="Artículo: Gastronomia Local, categoría gastronomía">
+                                <h3>Gastronomía local</h3>
+                            </article>
+                        </div>
                     </div>
-                </article>
-                </div>
-
-            <!-- ARTÍCULO PEQUEÑO -->
-                <div class="col-12 col-md-4 col-lg-4 d-flex">
-                <article class="post post--small gastronomia" tabindex="0" aria-label="Artículo: Gastronomia Local, categoría gastronomía">
-                    <h3>Gastronomía local</h3>
-                </article>
-                </div>
-
-                </div>
-
                 </div>
             </section>
-        <!--</fieldset>-->
 
     <!-- Seccion de COMENTARIOS -->
         <section class="snap-section comentarios py-5" aria-labelledby="titulo-comentarios">
             <div class="container">
-
-            <h2 class="text-center mb-4" id="titulo-comentarios">Comentarios</h2>
+                <h2 class="text-center mb-4" id="titulo-comentarios">Comentarios</h2>
             
-            <div class="row g-4">
-
-            <div class="col-12 col-md-12">
-            <div class="comentario" tabindex="0" aria-label="Comentario de Ana Pérez: Noruega me encantó, definitivamente quiero visitarlo">
-                <div class="avatar" aria-label="Avatar de Ana Pérez"></div>
-                <div class="texto">
-                    <h3>Ana Pérez</h3>
-                    <p>Noruega me encantó, definitivamente quiero visitarlo.</p>
+                <!-- FORMULARIO (SIMULADO) -->
+                <div class="form mb-4">
+                    <input id="nombre" class="form-control mb-2" placeholder="Tu nombre">
+                    <input id="texto" class="form-control mb-2" placeholder="Tu comentario">
+                    <button id="enviar" class="btn btn-primary w-100">Enviar comentario</button>
                 </div>
-            </div>
-            </div>
 
-            <div class="col-12 col-md-12">
-            <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Juan Gómez: Muy buena información, me ayudó a planificar mi viaje">
-                <div class="avatar" aria-label="Avatar de Juan Gómez"></div>
-                <div class="texto">
-                    <h3>Juan Gómez</h3>
-                    <p>Muy buena información, me ayudó a planificar mi viaje.</p>
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario" tabindex="0" aria-label="Comentario de Ana Pérez: Noruega me encantó, definitivamente quiero visitarlo">
+                            <div class="avatar" aria-label="Avatar de Ana Pérez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Ana Pérez</h3>
+                                <p>Noruega me encantó, definitivamente quiero visitarlo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Juan Gómez: Muy buena información, me ayudó a planificar mi viaje">
+                            <div class="avatar" aria-label="Avatar de Juan Gómez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Juan Gómez</h3>
+                                <p>Muy buena información, me ayudó a planificar mi viaje.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Julia Lopéz: Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable">
+                            <div class="avatar" aria-label="Avatar de Julia Lopéz"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Julia Lopéz</h3>
+                                <p>Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Marco Pérez: El Palacio de Buda me dejó impresionado, era gigante">
+                            <div class="avatar" aria-label="Avatar de Marco Pérez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Marco Pérez</h3>
+                                <p>El Palacio de Buda me dejó impresionado, era gigante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Daiana Ramirez: Deseo tanto volver a Islandia y ver las auroras voreales">
+                            <div class="avatar" aria-label="Avatar de Daiana Ramirez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Daiana Ramirez</h3>
+                                <p>Deseo tanto volver a Islandia y ver las auroras voreales.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-
-            <div class="col-12 col-md-12">
-            <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Julia Lopéz: Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable">
-                <div class="avatar" aria-label="Avatar de Julia Lopéz"></div>
-                <div class="texto">
-                    <h3>Julia Lopéz</h3>
-                    <p>Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable.</p>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-12 col-md-12">
-            <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Marco Pérez: El Palacio de Buda me dejó impresionado, era gigante">
-                <div class="avatar" aria-label="Avatar de Marco Pérez"></div>
-                <div class="texto">
-                    <h3>Marco Pérez</h3>
-                    <p>El Palacio de Buda me dejó impresionado, era gigante.</p>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-12 col-md-12">
-            <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Daiana Ramirez: Deseo tanto volver a Islandia y ver las auroras voreales">
-                <div class="avatar" aria-label="Avatar de Daiana Ramirez"></div>
-                <div class="texto">
-                    <h3>Daiana Ramirez</h3>
-                    <p>Deseo tanto volver a Islandia y ver las auroras voreales.</p>
-                </div>
-            </div>
-            </div>
-
-            </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer py-5 mt-5">
@@ -322,6 +309,7 @@
     </footer>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
@@ -330,7 +318,6 @@
 
         /* TEMA GUARDADO */
         const savedTheme = localStorage.getItem("theme");
-
             if (savedTheme === "dark") {
                 root.setAttribute("data-bs-theme", "dark");
                 toggle.innerHTML = '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>';
@@ -345,10 +332,55 @@
             const newTheme = currentTheme === "dark" ? "light" : "dark";
             root.setAttribute("data-bs-theme", newTheme);
             localStorage.setItem("theme", newTheme);
-    
             toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
         });
     </script>
+
+    <!-- SCRIPT PARA FILTRO -->
+    <script>
+        $(document).ready(function () {
+            $(".filtro-btn").click(function () {
+                const filtro = $(this).data("filter");
+                $(".filtro-btn").removeClass("active");
+                $(this).addClass("active");
+
+                if (filtro === "all") {
+                    $(".post").show(200);
+                } else {
+                    $(".post").hide();
+                    $(".post." + filtro).show(200);
+                }
+            });
+        });
+    </script>
+    <!-- SCRIPT ANIMACION COMENTARIOS -->
+    <script>
+        $(document).ready(function () {
+            $(".comentario").hide().each(function (i) {
+                $(this).delay(i * 300).fadeIn(300);
+            });
+        });
+    </script>
+
+    <!-- SCRIPT COMENTARIO SIMULADO-->
+    <script>
+        $("#enviar").click(function () {
+            const nombre = $("#nombre").val();
+            const texto = $("#texto").val();
+
+            const nuevo = $(`
+                <div class="comentario visible">
+                    <div class="avatar"></div>
+                    <div class="texto">
+                        <h3>${nombre}</h3>
+                        <p>${texto}</p>
+                    </div>
+                </div>
+            `);
+            $(".comentarios .row").prepend(nuevo);
+        });
+    </SCRIPT>
+
     <!-- SCRIPT PARA ACCESIBILIDAD POR TECLADO -->
     <script>
         document.querySelectorAll('.menu-filtros label').forEach(label => {
@@ -360,5 +392,23 @@
             });
         });
     </script>
+
+    <!-- SCRIPT PARA SCROLL-->
+    <script>
+        $(window).on("scroll", function () {
+            $(".post, .comentario").each(function () {
+                if ($(this).hasClass("visible")) return;
+
+                const top = $(this).offset().top;
+                const scroll = $(window).scrollTop();
+                const windowHeight = $(window).height();
+
+                if (scroll + windowHeight > top + 100) {
+                    $(this).addClass("visible");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

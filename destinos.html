@@ -80,103 +80,99 @@
             <div class="container">
                 <h1 class="text-center mb-4" id="titulo-destinos">Nuestros Destinos</h1> 
             
-            <!--<fieldset class="filtros-destinos">
-                <legend>Filtrar destinos</legend>
-
-                <input type="radio" id="todos" name="filter" class="filter-input" checked>
-                <input type="radio" id="cultural" name="filter" class="filter-input">
-                <input type="radio" id="naturaleza" name="filter" class="filter-input">
-                <input type="radio" id="playa" name="filter" class="filter-input">
-
-                <div class="menu-filtros">
-                    <label for="todos" class="filter-label" tabindex="0">🌟 Todos</label>
-                    <label for="cultural" class="filter-label" tabindex="0">🎭 Cultural</label>
-                    <label for="naturaleza" class="filter-label" tabindex="0">🌿 Naturaleza</label>
-                    <label for="playa" class="filter-label" tabindex="0">🏖️ Sol y Playa</label>
-                </div>-->
-
                 <!-- FILTROS -->
-                <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
                     <button class="btn btn-outline-primary filtro-btn active" data-filter="all">🌟 Todos</button>
                     <button class="btn btn-outline-primary filtro-btn" data-filter="cultural">🎭 Cultural</button>
                     <button class="btn btn-outline-primary filtro-btn" data-filter="naturaleza">🌿 Naturaleza</button>
                     <button class="btn btn-outline-primary filtro-btn" data-filter="playa">🏖️ Sol y Playa</button>
                 </div>
 
-                <div class="galeria">
-                    <article class="destinos-card cultural" tabindex="0" aria-label="Destino Palacio de Buda, categoría cultural">
-                        <div class="card-image">
-                        <img src="assets/img/tailandia.png" alt="Palacio de Buda en Tailandia" class="img-fluid"/>
-                            <div class="card-overlay">
-                                <div class="card-content text-center">
-                                    <h2>Palacio de Buda</h2>
-                                    <p>Cultura y Tradición</p>
+                <div class="row g-4 galeria">
+                    <div class="col-12 col-md-6 col-lg-4 destino-item">
+                        <article class="destinos-card cultural" tabindex="0" aria-label="Destino Palacio de Buda, categoría cultural">
+                            <div class="card-image">
+                            <img src="assets/img/tailandia.png" alt="Palacio de Buda en Tailandia" class="img-fluid"/>
+                                <div class="card-overlay">
+                                    <div class="card-content text-center">
+                                        <h2>Palacio de Buda</h2>
+                                        <p>Cultura y Tradición</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
 
-                    <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Machu Pichu, categoría naturaleza">
-                        <div class="card-image">
-                            <img src="assets/img/machupichu.png" alt="Machu Pichu en Perú" class="img-fluid"/>
-                            <div class="card-overlay">
-                                <div class="card-content text-center">
-                                    <h2>Machu Pichu</h2>
-                                    <p>Cultura y Naturaleza</p>
+                    <div class="col-12 col-md-6 col-lg-4 destino-item">
+                        <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Machu Pichu, categoría naturaleza">
+                            <div class="card-image">
+                                <img src="assets/img/machupichu.png" alt="Machu Pichu en Perú" class="img-fluid"/>
+                                <div class="card-overlay">
+                                    <div class="card-content text-center">
+                                        <h2>Machu Pichu</h2>
+                                        <p>Cultura y Naturaleza</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
 
-                    <article class="destinos-card playa" tabindex="0" aria-label="Playa Ñuro, categoría Sol y Playas">
-                        <div class="card-image">
-                            <img src="assets/img/playa.png" alt="Playa Ñuro en Perú" class="img-fluid"/>
-                            <div class="card-overlay">
-                                <div class="card-content text-center">
-                                    <h2>Playa Ñuro</h2>
-                                    <p>Playas y tortugas</p>
+                    <div class="col-12 col-md-6 col-lg-4 destino-item">
+                        <article class="destinos-card playa" tabindex="0" aria-label="Playa Ñuro, categoría Sol y Playas">
+                            <div class="card-image">
+                                <img src="assets/img/playa.png" alt="Playa Ñuro en Perú" class="img-fluid"/>
+                                <div class="card-overlay">
+                                    <div class="card-content text-center">
+                                        <h2>Playa Ñuro</h2>
+                                        <p>Playas y tortugas</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
 
-                    <article class="destinos-card cultural" tabindex="0" aria-label="Destino Estambul, categoría cultural">
-                        <div class="card-image">
-                            <img src="assets/img/estambul.png" alt="Estambul en Turquia" class="img-fluid"/>
-                            <div class="card-overlay">
-                                <div class="card-content text-center">
-                                    <h2>Estambul</h2>
-                                    <p>Cultura y Tradición</p>
+                    <div class="col-12 col-md-6 col-lg-4 destino-item">
+                        <article class="destinos-card cultural" tabindex="0" aria-label="Destino Estambul, categoría cultural">
+                            <div class="card-image">
+                                <img src="assets/img/estambul.png" alt="Estambul en Turquia" class="img-fluid"/>
+                                <div class="card-overlay">
+                                    <div class="card-content text-center">
+                                        <h2>Estambul</h2>
+                                        <p>Cultura y Tradición</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
 
-                    <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Islandia, categoría naturaleza">
-                        <div class="card-image">
-                            <img src="assets/img/islandia.png" alt="Glaciar Vatnajökull en Islandia" class="img-fluid"/>
-                            <div class="card-overlay">
-                                <div class="card-content text-center">
-                                    <h2>Islandia</h2>
-                                    <p>Cultura y Naturaleza</p>
+                    <div class="col-12 col-md-6 col-lg-4 destino-item">
+                        <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Islandia, categoría naturaleza">
+                            <div class="card-image">
+                                <img src="assets/img/islandia.png" alt="Glaciar Vatnajökull en Islandia" class="img-fluid"/>
+                                <div class="card-overlay">
+                                    <div class="card-content text-center">
+                                        <h2>Islandia</h2>
+                                        <p>Cultura y Naturaleza</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
 
-                    <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Noruega, categoría naturaleza">
-                        <div class="card-image">
-                            <img src="assets/img/noruega.png" alt="Tromso en Noruega" class="img-fluid"/>
-                            <div class="card-overlay">
-                                <div class="card-content text-center">
-                                    <h2>Noruega</h2>
-                                    <p>Cultura y Naturaleza</p>
+                    <div class="col-12 col-md-6 col-lg-4 destino-item">
+                        <article class="destinos-card naturaleza" tabindex="0" aria-label="Destino Noruega, categoría naturaleza">
+                            <div class="card-image">
+                                <img src="assets/img/noruega.png" alt="Tromso en Noruega" class="img-fluid"/>
+                                <div class="card-overlay">
+                                    <div class="card-content text-center">
+                                        <h2>Noruega</h2>
+                                        <p>Cultura y Naturaleza</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
-            <!--</fieldset>-->
             </div>
         </section>
     <!-- Seccion TABLA DE PRECIOS -->
@@ -307,6 +303,7 @@
     </footer>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
@@ -335,6 +332,43 @@
         });
     </script>
 
+    <script>
+        $(document).ready(function () {
+            $(".filtro-btn").click(function () {
+                const filtro = $(this).data("filter");
+                $(".filtro-btn").removeClass("active");
+                $(this).addClass("active");
+                
+                if (filtro === "all") {
+                    $(".destino-item").show(0);
+                }
+                else {
+                    $(".destino-item").hide();
+                    $(".destino-item")
+                        .filter(function () {
+                            return $(this)
+                            .find(".destinos-card")
+                            .hasClass(filtro);
+                        })
+                    .show(0);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".destinos-card").hover(
+                function () {
+                    $(this).addClass("zoom-active");
+                },
+                function () {
+                    $(this).removeClass("zoom-active");
+                }
+            );
+        });
+    </script>
+    
     <!-- SCRIPT PARA ACCESIBILIDAD POR TECLADO -->
     <script>
         document.querySelectorAll('.menu-filtros label').forEach(label => {
