@@ -1,65 +1,38 @@
-/* SECCION BLOG */
-.blog-header {
-    padding: 40px;
-    text-align: center;
-}
-.blog-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-.blog {
-
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    align-items: start;
-    margin-bottom: 80px;
 }
-
-/* ESTILO REVISTA */
+/* Cards */
 .post {
-    background: var(--surface);
-    border-radius: 12px;
     overflow: hidden;
+    border-radius: 20px;
+    transition: 0.3s ease;
     height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.post img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    
-}
-.post h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-
-.post .content {
-    padding: 15px;
-}
-
-.post--featured img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-}
-
-.post--small {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 230px;
-    text-align: center;
-    background: var(--surface);
+    background-color: var(--surface-alt);
 }
 .post:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/* Layout revista */
+.post-principal{
+    grid-column: span 8;
+}
+.post-normal {
+    grid-column: span 4;
+}
+.post-secundario {
+    grid-column: span 6;
+}
+.post-pequeño{
+    grid-column: span 2;
+    min-height: 250px;
 }
 
 /* ================= FILTRO POR CATEGORIAS ================= */
@@ -192,16 +165,24 @@ logo:focus-visible {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-    .blog {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto; 
+@media (max-width: 992px) {
+    .post-principal
+    .post-normal,
+    .post,
+    .post-pequeño,
+    .post-secundario {
+        grid-column: span 12;
+        grid-row: auto;
     }
+}
 
-    .post--featured,
-    .post--wide,
-    .post {
-        grid-column: span 1;
+@media (max-width: 600px) {
+    .post-principal
+    .post-normal,
+    .post,
+    .post-pequeño,
+    .post-secundario {
+        grid-column: span 12;
         grid-row: auto;
     }
 }

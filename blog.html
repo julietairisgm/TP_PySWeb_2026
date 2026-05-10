@@ -75,7 +75,7 @@
     </header>
 
     <main class="snap-container" aria-labelledby="titulo-blog">
-        <section class="blog-header">
+        <section class="blog-header text-center py-5">
             <h1 id="titulo-blog">Blog de Destinos</h1>
             <p>Explora los artículos de nuestros viajes a los destinos de ensueño</p>
         </section>
@@ -94,81 +94,79 @@
                     <div class="container">
                     <h2 class="sr-only text-center mb-4">Artículos del blog</h2>
 
-                    <div class="row g-4">
-
+                    <div class="blog-grid">
                     <!-- ARTÍCULO GRANDE (DESTACADO) -->
-                        <div class="col-12 col-lg-8 d-flex">
-                            <article class="post post--featured aventura" tabindex="0" aria-label="Artículo destacado: Destino imperdible en Noruega, categoría aventura">
-                                <img src="assets/img/noruega.png" alt="Paisaje montañoso en Noruega">
-                                <div class="content">
-                                    <h3>Destino Imperdible en Noruega</h3>
-                                    <p>Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.
+                        <article class="card post aventura post-principal" data-category="aventura">
+                            <img src="assets/img/noruega.png" class="card-img-top" alt="Paisaje montañoso en Noruega">
+                            <div class="card-body">
+                                <h3 class="card-title">Destino Imperdible en Noruega</h3>
+                                <p class="card-text">Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.
                                     Qué es lo que hace que Noruega sea uno de los lugares más visitados por los turistas?
-                                    Nuesta agente de turismo, Vivian Medrano, nos cuenta todo lo que debes saber si quiere conocer este precioso lugar.
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-
+                                    Nuesta agente de turismo, Vivian Medrano, nos cuenta todo lo que debes saber si quiere conocer este precioso lugar.</p>
+                            </div>
+                        </article>
                     <!-- ARTÍCULO MEDIO -->
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <article class="post aventura" tabindex="0" aria-label="Artículo: Aventura Inca, categoría aventura">
-                                <img src="assets/img/machupichu.png" alt="Ruinas de Machu Picchu en Perú">
-                                <div class="content">
-                                    <h3>Aventura Inca</h3>
-                                    <p>Trekking a través de la historia.</p>
-                                </div>
-                            </article>
-                        </div>
-
+                        <article class="card post aventura post-normal" tabindex="0" aria-label="Artículo: Aventura Inca, categoría aventura">
+                            <img src="assets/img/machupichu.png" class="card-img-top" alt="Ruinas de Machu Picchu en Perú">
+                            <div class="card-body">
+                                <h3 class="card-title">Aventura Inca</h3>
+                                <p class="card-text">Trekking a través de la historia.</p>
+                            </div>
+                        </article>
                     <!-- ARTÍCULO MEDIO -->
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <article class="post playa" tabindex="0" aria-label="Artículo: Playas que conectan, categoría playa">
-                                <img src="assets/img/playa.png" alt="Turtugar de mar nadando en las Playas Ñuro">
-                                <div class="content">
-                                    <h3>Playas que conectan</h3>
-                                    <p>¿Te imaginas tener la compañia de uno de los animales más longevos del mundo?</p>
-                                </div>
-                            </article>
-                        </div>
-
-                    <!-- ARTÍCULO PEQUEÑO -->
-                        <div class="col-12 col-md-4 col-lg-2 d-flex">
-                            <article class="post post--small cultura col-6 col-md-3" tabindex="0" aria-label="Artículo: Cultura y tradiciones, categoría cultura">
-                                <h3>Cultura y tradiciones</h3>
-                            </article>
-                        </div>
-
+                        <article class="card post playa post-normal" tabindex="0" aria-label="Artículo: Playas que conectan, categoría playa">
+                            <img src="assets/img/playa.png" alt="Turtugar de mar nadando en las Playas Ñuro">
+                            <div class="card-body">
+                                <h3 class="card-title">Playas que conectan</h3>
+                                <p class="card-text">¿Te imaginas tener la compañia de uno de los animales más longevos del mundo?</p>
+                            </div>
+                        </article>
                     <!-- ARTÍCULO GRANDE SECUNDARIO -->
-                        <div class="col-12 col-md-8 col-lg-6 d-flex">
-                            <article class="post post--wide cultura" tabindex="0" aria-label="Artículo: Ruta lleno de espiritualidad, categoría cultura">
-                                <img src="assets/img/tailandia.png" alt="Estatua de Buda en el Palacio de Buda">
-                                <div class="content">
-                                    <h3>Ruta lleno de espiritualidad</h3>
-                                    <p>Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
-                                </div>
-                            </article>
-                        </div>
-                
-                    <!-- ARTÍCULO GRANDE SECUNDARIO -->
-                        <div class="col-12 col-md-8 col-lg-8 d-flex">
-                            <article class="post post--wide aventura" tabindex="0" aria-label="Artículo: Encontrando las auroras, categoría aventura">
-                                <img src="assets/img/islandia.png" alt="Glaciares de Islandia">
-                                <div class="content">
-                                    <h3>Encontrando las auroras</h3>
-                                    <p>Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.
-                                    Glaciares, auroras voreales, y nieve. Si eres fanatico del invierno, debes leer esto.
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-
+                        <article class="card post cultura post-secundario" tabindex="0" aria-label="Artículo: Ruta lleno de espiritualidad, categoría cultura">
+                            <img src="assets/img/tailandia.png" alt="Estatua de Buda en el Palacio de Buda">
+                            <div class="card-body">
+                                <h3 class="card-title">Ruta lleno de espiritualidad</h3>
+                                <p class="card-text">Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
+                            </div>
+                        </article>
                     <!-- ARTÍCULO PEQUEÑO -->
-                        <div class="col-12 col-md-4 col-lg-4 d-flex">
-                            <article class="post post--small gastronomia" tabindex="0" aria-label="Artículo: Gastronomia Local, categoría gastronomía">
-                                <h3>Gastronomía local</h3>
-                            </article>
-                        </div>
+                        <article class="card post cultura post-pequeño" tabindex="0" aria-label="Artículo: Cultura y tradiciones, categoría cultura">
+                            <div class="card-header">Cultura</div>
+                            <div class="card-body">
+                                <figure>
+                                    <blockquote class="blockquote">
+                                        <p>Cultura y tradiciones</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO GRANDE SECUNDARIO -->
+                        <article class="card post aventura post-secundario" tabindex="0" aria-label="Artículo: Encontrando las auroras, categoría aventura">
+                            <img src="assets/img/islandia.png" alt="Glaciares de Islandia">
+                            <div class="card-body">
+                                <h3 class="card-title">Encontrando las auroras</h3>
+                                <p class="card-text">Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.
+                                Glaciares, auroras voreales, y nieve. Si eres fanatico del invierno, debes leer esto.
+                                </p>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO PEQUEÑO -->
+                        <article class="card post gastronomia post-pequeño" tabindex="0" aria-label="Artículo: Gastronomia Local, categoría gastronomía">
+                            <div class="card-header">Gastronomía</div>
+                            <div class="card-body">
+                                <figure>
+                                    <blockquote class="blockquote">
+                                        <p>Gastronomía local</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -310,7 +308,7 @@
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
+ 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
@@ -345,10 +343,10 @@
                 $(this).addClass("active");
 
                 if (filtro === "all") {
-                    $(".post").show(200);
+                    $(".post").show(0);
                 } else {
                     $(".post").hide();
-                    $(".post." + filtro).show(200);
+                    $(".post." + filtro).show(0);
                 }
             });
         });
