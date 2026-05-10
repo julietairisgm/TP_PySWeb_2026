@@ -78,38 +78,42 @@
         <h1 id="titulo-principal" class="sr-only">Contacto - Agencia de Viajes</h1>
         <section class="contacto"  aria-labelledby="titulo-contacto">
             <div class="container-fluid p-0">
+                <div class="contacto-wrapper d-flex justify-content-center align-items-center">
 
-                <div class="contacto-wrapper">
-
-                <!-- IMAGEN -->
                     <div class="contacto-img">
                         <img src="assets/img/contacto.png" alt="Persona contactando a la agencia de viajes">
                     </div>
 
-                <!-- OVERLAY -->
-                <div class="form-overlay" aria-hidden="true"></div>
+                    <div class="form-overlay" aria-hidden="true"></div>
                 
-                <!-- FORMULARIO -->
-                    <form class="form-contacto" action="#confirmacion">
+                    <form class="form-contacto d-flex flex-column align-items-center" action="#">
                         <h2 class="text-center mb-4" id="titulo-contacto">Contáctanos</h2>
-                        
-                        <input type="text" required minlength="3" placeholder="Tu nombre"  aria-label="Nombre completo">
-                        <input type="email" required placeholder="Tu email" aria-label="Correo electrónico">
-                        <textarea required minlength="10" placeholder="Déjanos tu mensaje"  aria-label="Mensaje"></textarea>
-                        <button type="submit" class="btn-primary" aria-label="Enviar formulario de contacto">
+                        <input type="text" class="nombre"  minlength="3" placeholder="Tu nombre" aria-label="Nombre completo">
+                        <input type="email" class="email" required placeholder="Tu email" aria-label="Correo electrónico">
+                        <textarea  class="mensaje" minlength="10" placeholder="Déjanos tu mensaje" aria-label="Mensaje"></textarea>
+                        <button type="submit" class="btn btn-primary w-50" id="btnEnviar" aria-label="Enviar formulario de contacto">
                             <span class="texto">Enviar</span>
-                            <span class="spinner"></span>
+                            <span class="spinner-border spinner-border-md d-none"></span>
                         </button>
                     </form>
-
                 </div>
         </section>
     </main>
-    <div id="confirmacion" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
-        <div class="modal-contenido">
-            <h3 id="titulo-modal">¡Tu mensaje fue enviado con éxito! ✅</h3>
-            <p>Gracias por contactarnos. Te responderemos pronto.</p>
-            <a href="#" class="btn-primary" tabindex="0" aria-label="Cerrar mensaje de confirmación">Cerrar</a>
+
+    <div class="modal fade" id="confirmacion" tabindex="-1" aria-labelledby="titulo-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titulo-modal">¡Tu mensaje fue enviado con éxito! ✅</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Gracias por contactarnos. Te responderemos pronto.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -181,6 +185,7 @@
     </footer>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
@@ -208,5 +213,71 @@
             toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(".nombre").on("input", function() {
+                const val = $(this).val().trim();
+                if (val.length >= 3 && /^[a-zA-Z\s]+$/.test(val)) {
+                    $(this).removeClass("input-error").addClass("input-ok");
+                } else {
+                    $(this).removeClass("input-ok").addClass("input-error");
+                }
+            });
+
+            $(".email").on("input", function() {
+                const val = $(this).val().trim();
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (val.length >= 5 && emailRegex.test(val)) {
+                    $(this).removeClass("input-error").addClass("input-ok");
+                } else {
+                    $(this).removeClass("input-ok").addClass("input-error");
+                }
+            });
+
+            $(".mensaje").on("input", function() {
+                const val = $(this).val().trim();
+                if (val.length >= 10) {
+                    $(this).removeClass("input-error").addClass("input-ok");
+                } else {
+                    $(this).removeClass("input-ok").addClass("input-error");
+                }
+            });
+
+            $(".form-contacto").on("submit", function(e) {
+                e.preventDefault();
+                const $form = $(this);
+                const nombre = $form.find(".nombre").val().trim();
+                const email = $form.find(".email").val().trim();
+                const mensaje = $form.find(".mensaje").val().trim();
+
+                let esValido = true;
+                if (nombre.length < 3 || !/^[a-zA-Z\s]+$/.test(nombre)) {
+                    esValido = false; alert("Nombre inválido");
+                } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                    esValido = false; alert("Email inválido");
+                } else if (mensaje.length < 10) {
+                    esValido = false; alert("Mensaje muy corto");
+                }
+                if (!esValido) return;
+
+                const $btn = $("#btnEnviar");
+                $btn.find(".texto").hide();
+                $btn.find(".spinner-border").removeClass("d-none");
+                $btn.prop("disabled", true);
+
+                setTimeout(() => {
+                    $btn.find(".texto").show();
+                    $btn.find(".spinner-border").addClass("d-none");
+                    $btn.prop("disabled", false);
+                    $form[0].reset();
+                    $(".input-ok, .input-error").removeClass("input-ok input-error");
+                    new bootstrap.Modal(document.getElementById('confirmacion')).show();
+                }, 1500);
+            });
+        });
+    </script>
+
 </body>
 </html>
