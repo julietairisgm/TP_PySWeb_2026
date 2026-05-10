@@ -78,24 +78,40 @@
         <h1 id="titulo-principal" class="sr-only">Contacto - Agencia de Viajes</h1>
         <section class="contacto"  aria-labelledby="titulo-contacto">
             <div class="container-fluid p-0">
-                <div class="contacto-wrapper d-flex justify-content-center align-items-center">
+                <div class="row g-0 h-100">
 
-                    <div class="contacto-img">
+                    <div class="col-12 contacto-img">
                         <img src="assets/img/contacto.png" alt="Persona contactando a la agencia de viajes">
                     </div>
 
-                    <div class="form-overlay" aria-hidden="true"></div>
+                    <div class="col-12 d-flex justify-content-center align-items-center position-relative">
+                        <div class="form-overlay" aria-hidden="true"></div>
                 
-                    <form class="form-contacto d-flex flex-column align-items-center" action="#">
-                        <h2 class="text-center mb-4" id="titulo-contacto">Contáctanos</h2>
-                        <input type="text" class="nombre"  minlength="3" placeholder="Tu nombre" aria-label="Nombre completo">
-                        <input type="email" class="email" required placeholder="Tu email" aria-label="Correo electrónico">
-                        <textarea  class="mensaje" minlength="10" placeholder="Déjanos tu mensaje" aria-label="Mensaje"></textarea>
-                        <button type="submit" class="btn btn-primary w-50" id="btnEnviar" aria-label="Enviar formulario de contacto">
+                    <form class="form-contacto row g-3" action="#">
+                        <div class="col-12">
+                        <h2 class="text-center text-white mb-4" id="titulo-contacto">Contáctanos</h2>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="inputNombre" class="form-label text-white">Nombre:</label>
+                            <input type="text" class="form-control nombre"  minlength="3" aria-label="Nombre completo">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="inputEmail" class="form-label text-white">Email:</label>
+                        <input type="email" class="form-control email" required aria-label="Correo electrónico">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputMensaje" class="form-label text-white">Mensaje:</label>
+                        <textarea  class="form-control mensaje" minlength="10" aria-label="Mensaje"></textarea>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-50 px-4" id="btnEnviar" aria-label="Enviar formulario de contacto">
                             <span class="texto">Enviar</span>
-                            <span class="spinner-border spinner-border-md d-none"></span>
+                            <span class="spinner-border spinner-border-sm d-none"></span>
                         </button>
+                        </div>
                     </form>
+                    </div>
+                </div>
                 </div>
         </section>
     </main>
@@ -117,7 +133,7 @@
         </div>
     </div>
     
-    <footer class="footer py-5 mt-5">
+    <footer class="footer py-5">
         <div class="container">
             <div class="row gy-5 align-items-start">
 
