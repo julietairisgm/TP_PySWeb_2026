@@ -1,22 +1,18 @@
-.precios {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-}
+
 .precios h1 {
     text-align: center;
     font-size: 2.2rem;
 }
 
 /* TABLA DE PRECIOS */
-.tabla-container {
+.table-container {
     width: 100%;
     overflow-x: auto;
     max-width: 1500px;
     margin: 40px auto;
     padding: 0 20px;
 }
+
 .tabla-precios{
     width: 100%;
     border-collapse: collapse;
@@ -39,7 +35,8 @@
     padding: 15px;
     text-align: left;
     font-weight: bold;
-    color: var(--white);
+    color: white;
+    background-color: var(--bs-primary);
 }
 .tabla-precios td {
     padding: 15px;
@@ -50,37 +47,12 @@
 .tabla-precios tbody tr {
     transition: all 0.3s ease;
 }
-.tabla-precios tbody tr:hover {
-    background: color-mix(in srgb, var(--accent) 45%, transparent);
-    transform: scale(1.01);
-}
-/* TOOLTIP BASE */
-.tabla-precios td[data-tooltip] {
-    position: relative;
-    cursor: help;
-}
-/* TEXTO TOOLTIP */
-.tabla-precios td[data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--accent);
-    color: black;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
-    z-index: 100;
-}
-.tabla-precios td[data-tooltip]:hover::after,
-.tabla-precios td[data-tooltip]:focus-visible::after {
-    opacity: 1;
-    z-index: 100 !important;
+
+.tabla-precios tbody tr:hover td {
+    background-color: var(--accent);
+    transition: all 0.3s ease;
+    color: var(--bg-color);
+    font-weight: 400;
 }
 
 .nav-link:focus-visible,
