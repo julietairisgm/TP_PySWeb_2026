@@ -47,7 +47,7 @@
     border: 2px solid var(--white);
 }
 
-.form-control {
+.form-contacto .form-control {
     border: 0;
     padding: 12px 16px;
     border-radius: 10px;
@@ -86,6 +86,10 @@
 #btnEnviar:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.form-suscripcion .form-control{
+    background-color: var(--bg-color) !important;
 }
 
 .sr-only {

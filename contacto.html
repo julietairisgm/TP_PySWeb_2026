@@ -31,11 +31,11 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="destinos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Destinos
+                            <i class="fa-solid fa-plane-departure"></i> Destinos
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="destinos.html">Perú</a></li>
@@ -47,7 +47,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="agencias.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Agencias
+                            <i class="fa-solid fa-address-card"></i> Agencias
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="agencias.html">Horizonte</a></li>
@@ -58,13 +58,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="precios.html">Tarifas</a>
+                            <a class="nav-link" href="precios.html"><i class="fa-solid fa-wallet"></i> Tarifas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+                            <a class="nav-link" aria-current="page" href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
+                            <a class="nav-link" aria-current="page" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
                         </li>
                     </ul>
                     <!-- MODO CLARO/OSCURO -->
@@ -105,6 +105,7 @@
                         </div>
                         <div class="col-12 d-flex justify-content-center">
                         <button type="submit" class="btn btn-primary w-50 px-4" id="btnEnviar" aria-label="Enviar formulario de contacto">
+                            <i class="fa-solid fa-paper-plane"></i>
                             <span class="texto">Enviar</span>
                             <span class="spinner-border spinner-border-sm d-none"></span>
                         </button>
@@ -120,7 +121,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="titulo-modal">¡Tu mensaje fue enviado con éxito! ✅</h5>
+                    <h5 class="modal-title" id="titulo-modal">¡Tu mensaje fue enviado con éxito!</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -143,7 +144,7 @@
                         <i class="fa-solid fa-envelope"></i>
                         Suscríbete al newsletter
                     </h2>
-                    <form>
+                    <form class="form-suscripcion">
                         <label for="email" class="form-label text-center">Recibe las mejores ofertas directamente en tu correo</label>
                         <input id="email" type="email" class="form-control mb-3" placeholder="tu@email.com" required/>
                         <button class="btn btn-primary w-100" type="submit">
@@ -156,19 +157,13 @@
             <!-- REDES SOCIALES -->
                 <div class="col-12 col-md-6 col-lg-4 text-center">
                     <h3 class="h4 mb-4">
-                        <i class="fa-solid fa-share-nodes"></i>
+                        <span class="icono-like"></span>
                         Síguenos
                     </h3>
-                    <div class="d-flex justify-content-center gap-3 mb-4">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
+                    <div class="redes d-flex justify-content-center gap-3 mb-4">
+                        <a href="#" class="icono icono-facebook"></a>
+                        <a href="#" class="icono icono-instagram"></a>
+                        <a href="#" class="icono icono-twitter"></a>
                     </div>
                     <p class="mb-0">Comparte tus aventuras con nosotros</p>
                 </div>
