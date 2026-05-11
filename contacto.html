@@ -4,187 +4,299 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Global - Tu Viaje Perfecto Comienza Aquí</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 <body data-theme="dark">
     <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <div class="logo-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 512 512">
-                    <g transform="translate(15,15)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="482" height="482" viewBox="0 0 24 24" fill="none" stroke="#efbc75" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
-                            <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"></path>
-                        </svg>
-                    </g>
-                </svg>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- LOGO DEL SISTEMA -->
+                <a class="navbar-brand d-flex align-items-center g-2" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="#efbc75" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                        <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"></path>
+                    </svg>
+                <span>Trip Tour</span>
+                </a>
+                <!-- MENU HAMBURGUESA -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="destinos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-plane-departure"></i> Destinos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="destinos.html">Perú</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Noruega</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Islandia</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Tailandia</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Estambul</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="agencias.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-address-card"></i> Agencias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="agencias.html">Horizonte</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">Alta Pinta</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">Sunset</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">La Sierra</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">La Frida</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="precios.html"><i class="fa-solid fa-wallet"></i> Tarifas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+                        </li>
+                    </ul>
+                    <!-- MODO CLARO/OSCURO -->
+                    <button id="themeToggle" class="btn btn-link nav-link p-0"><i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i></button>
                 </div>
-                <span class="logo-texto">Trip Tour</span>
             </div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="hamburger">☰</label>
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li><a href="destinos.html" class="nav-link">Destinos</a></li>
-                    <li><a href="agencias.html" class="nav-link">Agencias</a></li>
-                    <li><a href="precios.html" class="nav-link">Precios</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
-                </ul>
-            </nav>
-            <button id="themeToggle" class="modo-btn">🌙</button>
-        </div>
+        </nav>
     </header>
 
     <main class="snap-container" aria-labelledby="titulo-principal">
         <h1 id="titulo-principal" class="sr-only">Contacto - Agencia de Viajes</h1>
         <section class="contacto"  aria-labelledby="titulo-contacto">
-            <div class="contacto-container">
-                <div class="contacto-img">
-                    <img src="assets/img/contacto.png" alt="Persona contactando a la agencia de viajes">
+            <div class="container-fluid p-0">
+                <div class="row g-0 h-100">
+
+                    <div class="col-12 contacto-img">
+                        <img src="assets/img/contacto.png" alt="Persona contactando a la agencia de viajes">
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center align-items-center position-relative">
+                        <div class="form-overlay" aria-hidden="true"></div>
+                
+                        <form class="form-contacto row g-3" action="#">
+                            <div class="col-12">
+                                <h2 class="text-center text-white mb-4" id="titulo-contacto">Contáctanos</h2>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="inputNombre" class="form-label text-white">Nombre:</label>
+                                <input type="text" class="form-control nombre"  minlength="3" aria-label="Nombre completo">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="inputEmail" class="form-label text-white">Email:</label>
+                                <input type="email" class="form-control email" required aria-label="Correo electrónico">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputMensaje" class="form-label text-white">Mensaje:</label>
+                                <textarea  class="form-control mensaje" minlength="10" aria-label="Mensaje"></textarea>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary w-50 px-4" id="btnEnviar" aria-label="Enviar formulario de contacto">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span class="texto">Enviar</span>
+                                    <span class="spinner-border spinner-border-sm d-none"></span>
+                                </button>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <p class="text-white">Para nosotros es importante la concientización sobre los ataques de phishing.
+                                    Pon a prueba tus conocimientos y aprende a detectar posibles estafas digitales.
+                                </p>
+                                <a class="btn btn-light w-50" aria-current="page" href="phishing.html">
+                                    <i class="fas fa-shield-alt me-2"></i>Iniciar Simulación
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-overlay" aria-hidden="true"></div>
-                <form class="form-contacto" action="#confirmacion">
-                    <h2 id="titulo-contacto">Contáctanos</h2>
-                    <input type="text" required minlength="3" placeholder="Tu nombre"  aria-label="Nombre completo">
-                    <input type="email" required placeholder="Tu email" aria-label="Correo electrónico">
-                    <textarea required minlength="10" placeholder="Déjanos tu mensaje"  aria-label="Mensaje"></textarea>
-                    <button type="submit" class="btn-primary" aria-label="Enviar formulario de contacto">
-                        <span class="texto">Enviar</span>
-                        <span class="spinner"></span>
-                    </button>
-                </form>
             </div>
         </section>
     </main>
-    <div id="confirmacion" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
-        <div class="modal-contenido">
-            <h3 id="titulo-modal">¡Tu mensaje fue enviado con éxito! ✅</h3>
-            <p>Gracias por contactarnos. Te responderemos pronto.</p>
-            <a href="#" class="btn-primary" tabindex="0" aria-label="Cerrar mensaje de confirmación">Cerrar</a>
+
+    <div class="modal fade" id="confirmacion" tabindex="-1" aria-labelledby="titulo-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titulo-modal">¡Tu mensaje fue enviado con éxito!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Gracias por contactarnos. Te responderemos pronto.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
     </div>
     
-    <footer class="footer">
-        <div class="footer-container">
-        <!--Formulario-->
-            <div class="footer-section" aria-labelledby="titulo-suscripcion">
-                <h2 id="titulo-suscripcion">SUSBRIBETE AL NEWSLETTER</h2>
-                <form class="form-content">
-                    <label for="email">Recibe las mejores ofertas directamente en tu correo</label>
-                    <input id="email" type="email" placeholder="tu@email.com" required>
-                    <button class="btn btn-primary" type="submit">¡Suscribete!</button>
-                </form>
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row gy-5 align-items-start">
+
+            <!-- NEWSLETTER -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h2 class="h4 mb-4 text-center">
+                        <i class="fa-solid fa-envelope"></i>
+                        Suscríbete al newsletter
+                    </h2>
+                    <form class="form-suscripcion">
+                        <label for="email" class="form-label text-center">Recibe las mejores ofertas directamente en tu correo</label>
+                        <input id="email" type="email" class="form-control mb-3" placeholder="tu@email.com" required/>
+                        <button class="btn btn-primary w-100" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            ¡Suscribirme!
+                        </button>
+                    </form>
+                </div>
+
+            <!-- REDES SOCIALES -->
+                <div class="col-12 col-md-6 col-lg-4 text-center">
+                    <h3 class="h4 mb-4">
+                        <span class="icono-like"></span>
+                        Síguenos
+                    </h3>
+                    <div class="redes d-flex justify-content-center gap-3 mb-4">
+                        <a href="#" class="icono icono-facebook"></a>
+                        <a href="#" class="icono icono-instagram"></a>
+                        <a href="#" class="icono icono-twitter"></a>
+                    </div>
+                    <p class="mb-0">Comparte tus aventuras con nosotros</p>
+                </div>
+
+            <!-- MAPA -->
+                <div class="col-12 col-lg-4">
+                    <h3 class="h4 mb-4 text-center">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        Nuestra ubicación
+                    </h3>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.14561023!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890"
+                            width="100%"
+                            height="220"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
             </div>
-        <!--Redes Sociales-->
-            <div class="redes-container">
-            <!-- FACEBOOK -->
-            <div class="redes-iconos">
-                <a href="#" aria-label="Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512" fill="none">
-                        <defs>
-                            <filter id="noise" opacity="0">
-                                <feTurbulence type="fractalNoise" baseFrequency="19.5" numOctaves="10" result="turbulence"></feTurbulence>
-                                <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"></feComposite>
-                                <feColorMatrix in="composite" type="luminanceToAlpha"></feColorMatrix>
-                                <feBlend in="SourceGraphic" in2="composite" mode="color-burn"></feBlend>
-                            </filter>
-                            <linearGradient id="linearGradient" gradientUnits="userSpaceOnUse" gradientTransform="rotate(45)" style="transform-origin: center center 0px;">
-                                <stop stop-color="#75b1ff"></stop>
-                                <stop offset="1" stop-color="#000a99"></stop>
-                            </linearGradient>
-                            <radialGradient id="radialGradient" cx="50%" cy="50%" r="100%" fx="50%" fy="0%" gradientUnits="objectBoundingBox">
-                                <stop stop-color="#75b1ff"></stop>
-                                <stop offset="1" stop-color="#000a99"></stop>
-                            </radialGradient>
-                            <radialGradient id="radialGlare" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256) rotate(90) scale(512)">
-                                <stop stop-color="white"></stop>
-                                <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                            </radialGradient>
-                            <clipPath id="image-clip">
-                                <use xlink:href="#image"></use>
-                            </clipPath>
-                        </defs>
-                        <rect id="image" width="512" height="512" fill="url(#radialGradient)" stroke="#FFFFFF" stroke-width="0" stroke-opacity="100%" paint-order="stroke" rx="300" ry="300"></rect>
-                        <g transform="rotate(0 0 0)" style="transform-origin: 256px 256px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook" x="56" y="56">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </g>
-                        <image href="data:image/svg+xml,%3csvg%20viewBox='0%200%20400%20400'%20xmlns='http://www.w3.org/2000/svg'%3e%3cfilter%20id='noiseFilter'%3e%3cfeTurbulence%20type='fractalNoise'%20baseFrequency='1.73'%20numOctaves='3'%20stitchTiles='stitch'/%3e%3c/filter%3e%3crect%20width='100%25'%20height='100%25'%20filter='url(%23noiseFilter)'/%3e%3c/svg%3e" width="512" height="512" opacity="0%" clip-path="url(#image-clip)" rx="300" ry="300"></image>
-                    </svg>
-                </a>
-            <!-- INSTAGRAM -->
-                <a href="#" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512" fill="none">
-                    <defs>
-                        <filter id="noise-ig" opacity="0">
-                            <feTurbulence type="fractalNoise" baseFrequency="19.5" numOctaves="10" result="turbulence"></feTurbulence>
-                            <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"></feComposite>
-                            <feColorMatrix in="composite" type="luminanceToAlpha"></feColorMatrix>
-                            <feBlend in="SourceGraphic" in2="composite" mode="color-burn"></feBlend>
-                        </filter>
-                        <linearGradient id="linearGradient-ig" gradientUnits="userSpaceOnUse" gradientTransform="rotate(45)">
-                            <stop stop-color="#ffdd00"></stop>
-                            <stop offset="1" stop-color="#a600ff"></stop>
-                        </linearGradient>
-                        <radialGradient id="radialGradient-ig" cx="50%" cy="50%" r="100%" fx="50%" fy="0%">
-                            <stop stop-color="#ffdd00"></stop>
-                            <stop offset="1" stop-color="#a600ff"></stop>
-                        </radialGradient>
-                        <radialGradient id="radialGlare-ig" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256) rotate(90) scale(512)">
-                            <stop stop-color="white"></stop>
-                            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                        </radialGradient>
-                        <clipPath id="image-clip-ig">
-                            <use xlink:href="#image-ig"></use>
-                        </clipPath>
-                    </defs>
-                    <rect id="image-ig" width="512" height="512" fill="url(#radialGradient-ig)" rx="300" ry="300"></rect>
-                    <g transform="rotate(0 0 0)" style="transform-origin: 256px 256px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x="56" y="56">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                        </svg>
-                    </g>
-                    <image href="data:image/svg+xml,%3csvg%20viewBox='0%200%20400%20400'%20xmlns='http://www.w3.org/2000/svg'%3e%3cfilter%20id='noiseFilter'%3e%3cfeTurbulence%20type='fractalNoise'%20baseFrequency='1.73'%20numOctaves='3'%20stitchTiles='stitch'/%3e%3c/filter%3e%3crect%20width='100%25'%20height='100%25'%20filter='url(%23noiseFilter)'/%3e%3c/svg%3e" width="512" height="512" opacity="0%" clip-path="url(#image-clip-ig)" rx="300" ry="300"></image>
-                    </svg>
-                </a>
+
+        <!-- COPYRIGHT -->
+            <div class="text-center pt-4 mt-5 border-top">
+                <small>&copy; 2026 Trip Tour. Todos los derechos reservados.</small>
             </div>
-            <span>&copy; 2026 Todos los derechos reservados</span>
-            </div>
-        <!--Mapa-->
-            <div class="footer-map" aria-label="Mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.14561023!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890" 
-                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
+
         </div>
     </footer>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;
 
-        root.classList.remove("dark");
-        toggle.textContent = "🌙";
+        /* TEMA GUARDADO */
+        const savedTheme = localStorage.getItem("theme");
 
-        if (localStorage.getItem("theme") === "dark") {
-            root.classList.add("dark");
-            toggle.textContent = "☀️";
-        }
+            if (savedTheme === "dark") {
+                root.setAttribute("data-bs-theme", "dark");
+                toggle.innerHTML = '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>';
+            } else {
+                root.setAttribute("data-bs-theme", "light");
+                toggle.innerHTML = '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
+            }
 
+        /* CAMBIO DE TEMA */
         toggle.addEventListener("click", () => {
-            const isDark = root.classList.toggle("dark");
-            toggle.textContent = isDark ? "☀️" : "🌙";
-            localStorage.setItem("theme", isDark ? "dark" : "light");
+            const currentTheme = root.getAttribute("data-bs-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            root.setAttribute("data-bs-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+    
+            toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(".nombre").on("input", function() {
+                const val = $(this).val().trim();
+                if (val.length >= 3 && /^[a-zA-Z\s]+$/.test(val)) {
+                    $(this).removeClass("input-error").addClass("input-ok");
+                } else {
+                    $(this).removeClass("input-ok").addClass("input-error");
+                }
+            });
+
+            $(".email").on("input", function() {
+                const val = $(this).val().trim();
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (val.length >= 5 && emailRegex.test(val)) {
+                    $(this).removeClass("input-error").addClass("input-ok");
+                } else {
+                    $(this).removeClass("input-ok").addClass("input-error");
+                }
+            });
+
+            $(".mensaje").on("input", function() {
+                const val = $(this).val().trim();
+                if (val.length >= 10) {
+                    $(this).removeClass("input-error").addClass("input-ok");
+                } else {
+                    $(this).removeClass("input-ok").addClass("input-error");
+                }
+            });
+
+            $(".form-contacto").on("submit", function(e) {
+                e.preventDefault();
+                const $form = $(this);
+                const nombre = $form.find(".nombre").val().trim();
+                const email = $form.find(".email").val().trim();
+                const mensaje = $form.find(".mensaje").val().trim();
+
+                let esValido = true;
+                if (nombre.length < 3 || !/^[a-zA-Z\s]+$/.test(nombre)) {
+                    esValido = false; alert("Nombre inválido");
+                } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                    esValido = false; alert("Email inválido");
+                } else if (mensaje.length < 10) {
+                    esValido = false; alert("Mensaje muy corto");
+                }
+                if (!esValido) return;
+
+                const $btn = $("#btnEnviar");
+                $btn.find(".texto").hide();
+                $btn.find(".spinner-border").removeClass("d-none");
+                $btn.prop("disabled", true);
+
+                setTimeout(() => {
+                    $btn.find(".texto").show();
+                    $btn.find(".spinner-border").addClass("d-none");
+                    $btn.prop("disabled", false);
+                    $form[0].reset();
+                    $(".input-ok, .input-error").removeClass("input-ok input-error");
+                    new bootstrap.Modal(document.getElementById('confirmacion')).show();
+                }, 1500);
+            });
+        });
+    </script>
+
 </body>
 </html>

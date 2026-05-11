@@ -4,281 +4,375 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Global - Tu Viaje Perfecto Comienza Aquí</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/blog.css">
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 <body data-theme="dark">
     <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <div class="logo-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 512 512">
-                    <g transform="translate(15,15)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="482" height="482" viewBox="0 0 24 24" fill="none" stroke="#efbc75" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
-                            <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"></path>
-                        </svg>
-                    </g>
-                </svg>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- LOGO DEL SISTEMA -->
+                <a class="navbar-brand d-flex align-items-center g-2" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="#efbc75" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                        <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"></path>
+                    </svg>
+                <span>Trip Tour</span>
+                </a>
+                <!-- MENU HAMBURGUESA -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="destinos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-plane-departure"></i> Destinos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="destinos.html">Perú</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Noruega</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Islandia</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Tailandia</a></li>
+                                <li><a class="dropdown-item" href="destinos.html">Estambul</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="agencias.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-address-card"></i> Agencias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="agencias.html">Horizonte</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">Alta Pinta</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">Sunset</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">La Sierra</a></li>
+                                <li><a class="dropdown-item" href="agencias.html">La Frida</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="precios.html"><i class="fa-solid fa-wallet"></i> Tarifas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+                        </li>
+                    </ul>
+                    <!-- MODO CLARO/OSCURO -->
+                    <button id="themeToggle" class="btn btn-link nav-link p-0"><i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i></button>
                 </div>
-                <span class="logo-texto">Trip Tour</span>
             </div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="hamburger">☰</label>
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li><a href="destinos.html" class="nav-link">Destinos</a></li>
-                    <li><a href="agencias.html" class="nav-link">Agencias</a></li>
-                    <li><a href="precios.html" class="nav-link">Precios</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
-                </ul>
-            </nav>
-            <button id="themeToggle" class="modo-btn">🌙</button>
-        </div>
+        </nav>
     </header>
 
     <main class="snap-container" aria-labelledby="titulo-blog">
-        <section class="blog-header">
+        <section class="blog-header text-center py-5">
             <h1 id="titulo-blog">Blog de Destinos</h1>
             <p>Explora los artículos de nuestros viajes a los destinos de ensueño</p>
         </section>
-        <fieldset class="grupo-filtros">
-            <legend class="sr-only">Filtrar artículos del blog</legend>
-                <input type="radio" id="todos" name="filter" class="filter-input" checked aria-label="Mostrar todos los artículos">
-                <input type="radio" id="cultura" name="filter" class="filter-input" aria-label="Filtrar por cultura">
-                <input type="radio" id="aventura" name="filter" class="filter-input" aria-label="Filtrar por aventura">
-                <input type="radio" id="gastronomia" name="filter" class="filter-input" aria-label="Filtrar por gastronomía">
-                <input type="radio" id="playa" name="filter" class="filter-input" aria-label="Filtrar por playas">
 
-            <div class="menu-filtros" aria-label="Filtrar artículos del blog">
-                <label for="todos" class="filter-label" tabindex="0" aria-label="Mostrar todos los artículos">🌟 Todos</label>
-                <label for="cultura" class="filter-label" tabindex="0" aria-label="Mostrar por cultura">🎭 Cultura</label>
-                <label for="aventura" class="filter-label" tabindex="0" aria-label="Mostrar por aventura">🌿 Aventura</label>
-                <label for="gastronomia" class="filter-label" tabindex="0" aria-label="Mostrar por gastronomía">🥗 Gastronomia</label>
-                <label for="playa" class="filter-label" tabindex="0" aria-label="Mostrar por playas">🏖️ Playas</label>
-            </div>
+            <!-- FILTROS --> 
+                <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                    <button class="btn btn-outline-primary filtro-btn active" data-filter="all"><i class="fa-solid fa-earth-americas"></i> Todos</button>
+                    <button class="btn btn-outline-primary filtro-btn" data-filter="cultura"><i class="fa-solid fa-landmark"></i> Cultura</button>
+                    <button class="btn btn-outline-primary filtro-btn" data-filter="aventura"><i class="fa-solid fa-seedling"></i> Aventura</button>
+                    <button class="btn btn-outline-primary filtro-btn" data-filter="gastronomia"><i class="fa-solid fa-utensils"></i> Gastronomia</button>
+                    <button class="btn btn-outline-primary filtro-btn" data-filter="playa"><i class="fa-solid fa-umbrella-beach"></i> Playas</button>
+                </div>
 
-        <!-- Seccion de BLOG -->
-            <section class="snap-section blog">
-                <h2 class="sr-only">Artículos del blog</h2>
-            <!-- ARTÍCULO GRANDE (DESTACADO) -->
-                <article class="post post--featured aventura" tabindex="0" aria-label="Artículo destacado: Destino imperdible en Noruega, categoría aventura">
-                    <img src="assets/img/noruega.png" alt="Paisaje montañoso en Noruega">
-                    <div class="content">
-                        <h3>Destino Imperdible en Noruega</h3>
-                        <p>Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.
-                        Qué es lo que hace que Noruega sea uno de los lugares más visitados por los turistas?
-                        Nuesta agente de turismo, Vivian Medrano, nos cuenta todo lo que debes saber si quiere conocer este precioso lugar.
-                        </p>
+            <!-- Seccion de BLOG -->
+                <section class="snap-section blog py-5">
+                    <div class="container">
+                    <h2 class="sr-only text-center mb-4">Artículos del blog</h2>
+
+                    <div class="blog-grid">
+                    <!-- ARTÍCULO GRANDE (DESTACADO) -->
+                        <article class="card post aventura post-principal" data-category="aventura">
+                            <img src="assets/img/noruega.png" class="card-img-top" alt="Paisaje montañoso en Noruega">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-seedling"></i>Destino Imperdible en Noruega</h3>
+                                <p class="card-text">Un recorrido por paisajes únicos y cultura local, donde la noche es más magica entre las montañas.
+                                    Qué es lo que hace que Noruega sea uno de los lugares más visitados por los turistas?
+                                    Nuesta agente de turismo, Vivian Medrano, nos cuenta todo lo que debes saber si quiere conocer este precioso lugar.</p>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO MEDIO -->
+                        <article class="card post aventura post-normal" tabindex="0" aria-label="Artículo: Aventura Inca, categoría aventura">
+                            <img src="assets/img/machupichu.png" class="card-img-top" alt="Ruinas de Machu Picchu en Perú">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-seedling"></i>Aventura Inca</h3>
+                                <p class="card-text">Trekking a través de la historia.</p>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO MEDIO -->
+                        <article class="card post playa post-normal" tabindex="0" aria-label="Artículo: Playas que conectan, categoría playa">
+                            <img src="assets/img/playa.png" alt="Turtugar de mar nadando en las Playas Ñuro">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-umbrella-beach"></i>Playas que conectan</h3>
+                                <p class="card-text">¿Te imaginas tener la compañia de uno de los animales más longevos del mundo?</p>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO GRANDE SECUNDARIO -->
+                        <article class="card post cultura post-secundario" tabindex="0" aria-label="Artículo: Ruta lleno de espiritualidad, categoría cultura">
+                            <img src="assets/img/tailandia.png" alt="Estatua de Buda en el Palacio de Buda">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-landmark"></i>Ruta lleno de espiritualidad</h3>
+                                <p class="card-text">Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO PEQUEÑO -->
+                        <article class="card post cultura post-pequeño" tabindex="0" aria-label="Artículo: Cultura y tradiciones, categoría cultura">
+                            <div class="card-header">Cultura</div>
+                            <div class="card-body">
+                                <figure>
+                                    <blockquote class="blockquote">
+                                        <p><i class="fa-solid fa-landmark"></i>Cultura y tradiciones</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO GRANDE SECUNDARIO -->
+                        <article class="card post aventura post-secundario" tabindex="0" aria-label="Artículo: Encontrando las auroras, categoría aventura">
+                            <img src="assets/img/islandia.png" alt="Glaciares de Islandia">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-seedling"></i>Encontrando las auroras</h3>
+                                <p class="card-text">Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.
+                                Glaciares, auroras voreales, y nieve. Si eres fanatico del invierno, debes leer esto.
+                                </p>
+                            </div>
+                        </article>
+                    <!-- ARTÍCULO PEQUEÑO -->
+                        <article class="card post gastronomia post-pequeño" tabindex="0" aria-label="Artículo: Gastronomia Local, categoría gastronomía">
+                            <div class="card-header">Gastronomía</div>
+                            <div class="card-body">
+                                <figure>
+                                    <blockquote class="blockquote">
+                                        <p><i class="fa-solid fa-utensils"></i>Gastronomía local</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
                     </div>
-                </article>
-            <!-- ARTÍCULO MEDIO -->
-                <article class="post aventura" tabindex="0" aria-label="Artículo: Aventura Inca, categoría aventura">
-                    <img src="assets/img/machupichu.png" alt="Ruinas de Machu Picchu en Perú">
-                    <div class="content">
-                        <h3>Aventura Inca</h3>
-                        <p>Trekking a través de la historia.</p>
-                    </div>
-                </article>
-            <!-- ARTÍCULO PEQUEÑO -->
-                <article class="post post--small gastronomia" tabindex="0" aria-label="Artículo: Gastronomia Local, categoría gastronomía">
-                    <h3>Gastronomía local</h3>
-                </article>
-            <!-- ARTÍCULO GRANDE SECUNDARIO -->
-                <article class="post post--wide cultura" tabindex="0" aria-label="Artículo: Ruta lleno de espiritualidad, categoría cultura">
-                    <img src="assets/img/tailandia.png" alt="Estatua de Buda en el Palacio de Buda">
-                    <div class="content">
-                        <h3>Ruta lleno de espiritualidad</h3>
-                        <p>Un viaje por lo mistico y religioso, conociendo la cultura en el Palacio de Buda.</p>
-                    </div>
-                </article>
-            <!-- ARTÍCULO GRANDE SECUNDARIO -->
-                <article class="post post--wide aventura" tabindex="0" aria-label="Artículo: Encontrando las auroras, categoría aventura">
-                    <img src="assets/img/islandia.png" alt="Glaciares de Islandia">
-                    <div class="content">
-                        <h3>Encontrando las auroras</h3>
-                        <p>Recorrido nocturno, donde las luces en el cielo son las que no verás en otro lado del mundo.
-                        Glaciares, auroras voreales, y nieve. Si eres fanatico del invierno, debes leer esto.
-                        </p>
-                    </div>
-                </article>
-            <!-- ARTÍCULO PEQUEÑO -->
-                <article class="post post--small cultura" tabindex="0" aria-label="Artículo: Cultura y tradiciones, categoría cultura">
-                    <h3>Cultura y tradiciones</h3>
-                </article>
-            <!-- ARTÍCULO MEDIO -->
-                <article class="post playa" tabindex="0" aria-label="Artículo: Playas que conectan, categoría playa">
-                    <img src="assets/img/playa.png" alt="Turtugar de mar nadando en las Playas Ñuro">
-                    <div class="content">
-                        <h3>Playas que conectan</h3>
-                        <p>¿Te imaginas tener la compañia de uno de los animales más longevos del mundo?</p>
-                    </div>
-                </article>
+                </div>
             </section>
-        </fieldset>
 
     <!-- Seccion de COMENTARIOS -->
-        <section class="snap-section comentarios" aria-labelledby="titulo-comentarios">
-            <h2 id="titulo-comentarios">Comentarios</h2>        
-            <div class="comentario" tabindex="0" aria-label="Comentario de Ana Pérez: Noruega me encantó, definitivamente quiero visitarlo">
-                <div class="avatar" aria-label="Avatar de Ana Pérez"></div>
-                <div class="texto">
-                    <h3>Ana Pérez</h3>
-                    <p>Noruega me encantó, definitivamente quiero visitarlo.</p>
+        <section class="snap-section comentarios py-5" aria-labelledby="titulo-comentarios">
+            <div class="container">
+                <h2 class="text-center mb-4" id="titulo-comentarios">Comentarios</h2>
+            
+                <!-- FORMULARIO (SIMULADO) -->
+                <div class="form mb-4">
+                    <input id="nombre" class="form-control mb-2" placeholder="Tu nombre">
+                    <input id="texto" class="form-control mb-2" placeholder="Tu comentario">
+                    <button id="enviar" class="btn btn-primary w-100">Enviar comentario</button>
                 </div>
-            </div>
-            <div class="comentario" tabindex="0" aria-label="Comentario de Juan Gómez: Muy buena información, me ayudó a planificar mi viaje">
-                <div class="avatar" aria-label="Avatar de Juan Gómez"></div>
-                <div class="texto">
-                    <h3>Juan Gómez</h3>
-                    <p>Muy buena información, me ayudó a planificar mi viaje.</p>
-                </div>
-            </div>
-            <div class="comentario" tabindex="0" aria-label="Comentario de Julia Lopéz: Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable">
-                <div class="avatar" aria-label="Avatar de Julia Lopéz"></div>
-                <div class="texto">
-                    <h3>Julia Lopéz</h3>
-                    <p>Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable.</p>
-                </div>
-            </div>
-            <div class="comentario" tabindex="0" aria-label="Comentario de Marco Pérez: El Palacio de Buda me dejó impresionado, era gigante">
-                <div class="avatar" aria-label="Avatar de Marco Pérez"></div>
-                <div class="texto">
-                    <h3>Marco Pérez</h3>
-                    <p>El Palacio de Buda me dejó impresionado, era gigante.</p>
-                </div>
-            </div>
-            <div class="comentario" tabindex="0" aria-label="Comentario de Daiana Ramirez: Deseo tanto volver a Islandia y ver las auroras voreales">
-                <div class="avatar" aria-label="Avatar de Daiana Ramirez"></div>
-                <div class="texto">
-                    <h3>Daiana Ramirez</h3>
-                    <p>Deseo tanto volver a Islandia y ver las auroras voreales.</p>
+
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario" tabindex="0" aria-label="Comentario de Ana Pérez: Noruega me encantó, definitivamente quiero visitarlo">
+                            <div class="avatar" aria-label="Avatar de Ana Pérez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Ana Pérez</h3>
+                                <p>Noruega me encantó, definitivamente quiero visitarlo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Juan Gómez: Muy buena información, me ayudó a planificar mi viaje">
+                            <div class="avatar" aria-label="Avatar de Juan Gómez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Juan Gómez</h3>
+                                <p>Muy buena información, me ayudó a planificar mi viaje.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Julia Lopéz: Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable">
+                            <div class="avatar" aria-label="Avatar de Julia Lopéz"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Julia Lopéz</h3>
+                                <p>Que hermoso fue nadar con las tortugas, fue una experiencia inolvidable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Marco Pérez: El Palacio de Buda me dejó impresionado, era gigante">
+                            <div class="avatar" aria-label="Avatar de Marco Pérez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Marco Pérez</h3>
+                                <p>El Palacio de Buda me dejó impresionado, era gigante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="comentario col-12 col-md-12" tabindex="0" aria-label="Comentario de Daiana Ramirez: Deseo tanto volver a Islandia y ver las auroras voreales">
+                            <div class="avatar" aria-label="Avatar de Daiana Ramirez"></div>
+                            <div class="texto">
+                                <h3 class="mb-2">Daiana Ramirez</h3>
+                                <p>Deseo tanto volver a Islandia y ver las auroras voreales.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-        <!--Formulario-->
-            <div class="footer-section" aria-labelledby="titulo-suscripcion">
-                <h2 id="titulo-suscripcion">SUSBRIBETE AL NEWSLETTER</h2>
-                <form class="form-content">
-                    <label for="email">Recibe las mejores ofertas directamente en tu correo</label>
-                    <input id="email" type="email" placeholder="tu@email.com" required>
-                    <button class="btn btn-primary" type="submit">¡Suscribete!</button>
-                </form>
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row gy-5 align-items-start">
+
+            <!-- NEWSLETTER -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h2 class="h4 mb-4 text-center">
+                        <i class="fa-solid fa-envelope"></i>
+                        Suscríbete al newsletter
+                    </h2>
+                    <form>
+                        <label for="email" class="form-label text-center">Recibe las mejores ofertas directamente en tu correo</label>
+                        <input id="email" type="email" class="form-control mb-3" placeholder="tu@email.com" required/>
+                        <button class="btn btn-primary w-100" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            ¡Suscribirme!
+                        </button>
+                    </form>
+                </div>
+
+            <!-- REDES SOCIALES -->
+                <div class="col-12 col-md-6 col-lg-4 text-center">
+                    <h3 class="h4 mb-4">
+                        <span class="icono-like"></span>
+                        Síguenos
+                    </h3>
+                    <div class="redes d-flex justify-content-center gap-3 mb-4">
+                        <a href="#" class="icono icono-facebook"></a>
+                        <a href="#" class="icono icono-instagram"></a>
+                        <a href="#" class="icono icono-twitter"></a>
+                    </div>
+                    <p class="mb-0">Comparte tus aventuras con nosotros</p>
+                </div>
+
+            <!-- MAPA -->
+                <div class="col-12 col-lg-4">
+                    <h3 class="h4 mb-4 text-center">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        Nuestra ubicación
+                    </h3>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.14561023!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890"
+                            width="100%"
+                            height="220"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
             </div>
-        <!--Redes Sociales-->
-            <div class="redes-container">
-            <!-- FACEBOOK -->
-            <div class="redes-iconos">
-                <a href="#" aria-label="Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512" fill="none">
-                        <defs>
-                            <filter id="noise" opacity="0">
-                                <feTurbulence type="fractalNoise" baseFrequency="19.5" numOctaves="10" result="turbulence"></feTurbulence>
-                                <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"></feComposite>
-                                <feColorMatrix in="composite" type="luminanceToAlpha"></feColorMatrix>
-                                <feBlend in="SourceGraphic" in2="composite" mode="color-burn"></feBlend>
-                            </filter>
-                            <linearGradient id="linearGradient" gradientUnits="userSpaceOnUse" gradientTransform="rotate(45)" style="transform-origin: center center 0px;">
-                                <stop stop-color="#75b1ff"></stop>
-                                <stop offset="1" stop-color="#000a99"></stop>
-                            </linearGradient>
-                            <radialGradient id="radialGradient" cx="50%" cy="50%" r="100%" fx="50%" fy="0%" gradientUnits="objectBoundingBox">
-                                <stop stop-color="#75b1ff"></stop>
-                                <stop offset="1" stop-color="#000a99"></stop>
-                            </radialGradient>
-                            <radialGradient id="radialGlare" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256) rotate(90) scale(512)">
-                                <stop stop-color="white"></stop>
-                                <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                            </radialGradient>
-                            <clipPath id="image-clip">
-                                <use xlink:href="#image"></use>
-                            </clipPath>
-                        </defs>
-                        <rect id="image" width="512" height="512" fill="url(#radialGradient)" stroke="#FFFFFF" stroke-width="0" stroke-opacity="100%" paint-order="stroke" rx="300" ry="300"></rect>
-                        <g transform="rotate(0 0 0)" style="transform-origin: 256px 256px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook" x="56" y="56">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </g>
-                        <image href="data:image/svg+xml,%3csvg%20viewBox='0%200%20400%20400'%20xmlns='http://www.w3.org/2000/svg'%3e%3cfilter%20id='noiseFilter'%3e%3cfeTurbulence%20type='fractalNoise'%20baseFrequency='1.73'%20numOctaves='3'%20stitchTiles='stitch'/%3e%3c/filter%3e%3crect%20width='100%25'%20height='100%25'%20filter='url(%23noiseFilter)'/%3e%3c/svg%3e" width="512" height="512" opacity="0%" clip-path="url(#image-clip)" rx="300" ry="300"></image>
-                    </svg>
-                </a>
-            <!-- INSTAGRAM -->
-                <a href="#" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512" fill="none">
-                    <defs>
-                        <filter id="noise-ig" opacity="0">
-                            <feTurbulence type="fractalNoise" baseFrequency="19.5" numOctaves="10" result="turbulence"></feTurbulence>
-                            <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"></feComposite>
-                            <feColorMatrix in="composite" type="luminanceToAlpha"></feColorMatrix>
-                            <feBlend in="SourceGraphic" in2="composite" mode="color-burn"></feBlend>
-                        </filter>
-                        <linearGradient id="linearGradient-ig" gradientUnits="userSpaceOnUse" gradientTransform="rotate(45)">
-                            <stop stop-color="#ffdd00"></stop>
-                            <stop offset="1" stop-color="#a600ff"></stop>
-                        </linearGradient>
-                        <radialGradient id="radialGradient-ig" cx="50%" cy="50%" r="100%" fx="50%" fy="0%">
-                            <stop stop-color="#ffdd00"></stop>
-                            <stop offset="1" stop-color="#a600ff"></stop>
-                        </radialGradient>
-                        <radialGradient id="radialGlare-ig" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256) rotate(90) scale(512)">
-                            <stop stop-color="white"></stop>
-                            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                        </radialGradient>
-                        <clipPath id="image-clip-ig">
-                            <use xlink:href="#image-ig"></use>
-                        </clipPath>
-                    </defs>
-                    <rect id="image-ig" width="512" height="512" fill="url(#radialGradient-ig)" rx="300" ry="300"></rect>
-                    <g transform="rotate(0 0 0)" style="transform-origin: 256px 256px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x="56" y="56">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                        </svg>
-                    </g>
-                    <image href="data:image/svg+xml,%3csvg%20viewBox='0%200%20400%20400'%20xmlns='http://www.w3.org/2000/svg'%3e%3cfilter%20id='noiseFilter'%3e%3cfeTurbulence%20type='fractalNoise'%20baseFrequency='1.73'%20numOctaves='3'%20stitchTiles='stitch'/%3e%3c/filter%3e%3crect%20width='100%25'%20height='100%25'%20filter='url(%23noiseFilter)'/%3e%3c/svg%3e" width="512" height="512" opacity="0%" clip-path="url(#image-clip-ig)" rx="300" ry="300"></image>
-                    </svg>
-                </a>
+
+        <!-- COPYRIGHT -->
+            <div class="text-center pt-4 mt-5 border-top">
+                <small>&copy; 2026 Trip Tour. Todos los derechos reservados.</small>
             </div>
-            <span>&copy; 2026 Todos los derechos reservados</span>
-            </div>
-        <!--Mapa-->
-            <div class="footer-map" aria-label="Mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.14561023!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicyMC44Ilc!5e0!3m2!1ses!2ses!4v1234567890" 
-                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
+
         </div>
     </footer>
 
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ 
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;
 
-        root.classList.remove("dark");
-        toggle.textContent = "🌙";
+        /* TEMA GUARDADO */
+        const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                root.setAttribute("data-bs-theme", "dark");
+                toggle.innerHTML = '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>';
+            } else {
+                root.setAttribute("data-bs-theme", "light");
+                toggle.innerHTML = '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
+            }
 
-        if (localStorage.getItem("theme") === "dark") {
-            root.classList.add("dark");
-            toggle.textContent = "☀️";
-        }
-
+        /* CAMBIO DE TEMA */
         toggle.addEventListener("click", () => {
-            const isDark = root.classList.toggle("dark");
-            toggle.textContent = isDark ? "☀️" : "🌙";
-            localStorage.setItem("theme", isDark ? "dark" : "light");
+            const currentTheme = root.getAttribute("data-bs-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            root.setAttribute("data-bs-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
         });
     </script>
+
+    <!-- SCRIPT PARA FILTRO -->
+    <script>
+        $(document).ready(function () {
+            $(".filtro-btn").click(function () {
+                const filtro = $(this).data("filter");
+                $(".filtro-btn").removeClass("active");
+                $(this).addClass("active");
+
+                if (filtro === "all") {
+                    $(".post").show(0);
+                } else {
+                    $(".post").hide();
+                    $(".post." + filtro).show(0);
+                }
+            });
+        });
+    </script>
+    <!-- SCRIPT ANIMACION COMENTARIOS -->
+    <script>
+        $(document).ready(function () {
+            $(".comentario").hide().each(function (i) {
+                $(this).delay(i * 300).fadeIn(300);
+            });
+        });
+    </script>
+
+    <!-- SCRIPT COMENTARIO SIMULADO-->
+    <script>
+        $("#enviar").click(function () {
+            const nombre = $("#nombre").val();
+            const texto = $("#texto").val();
+
+            const nuevo = $(`
+                <div class="comentario visible">
+                    <div class="avatar"></div>
+                    <div class="texto">
+                        <h3>${nombre}</h3>
+                        <p>${texto}</p>
+                    </div>
+                </div>
+            `);
+            $(".comentarios .row").prepend(nuevo);
+        });
+    </SCRIPT>
+
     <!-- SCRIPT PARA ACCESIBILIDAD POR TECLADO -->
     <script>
         document.querySelectorAll('.menu-filtros label').forEach(label => {
@@ -290,5 +384,23 @@
             });
         });
     </script>
+
+    <!-- SCRIPT PARA SCROLL-->
+    <script>
+        $(window).on("scroll", function () {
+            $(".post, .comentario").each(function () {
+                if ($(this).hasClass("visible")) return;
+
+                const top = $(this).offset().top;
+                const scroll = $(window).scrollTop();
+                const windowHeight = $(window).height();
+
+                if (scroll + windowHeight > top + 100) {
+                    $(this).addClass("visible");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

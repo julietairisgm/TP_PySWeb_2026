@@ -10,95 +10,55 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* FILTRO POR CATEGORIAS */
-.menu-filtros {
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-.grupo-filtros { 
-    position: relative;
-}
-.filter-input { 
-    display: none;
-}
-.filter-label {
-    display: inline-block;
-    padding: 12px 24px;
-    background: color-mix(in srgb, var(--surface) 80%, transparent);
-    color: var(--text-color);
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 2px solid color-mix(in srgb, var(--text-color) 20%, transparent);
-}
-/* LÓGICA DE FILTRO */
-#todos:checked ~ .menu-filtros label[for="todos"],
-#cultural:checked ~ .menu-filtros label[for="cultural"],
-#naturaleza:checked ~ .menu-filtros label[for="naturaleza"],
-#playa:checked ~ .menu-filtros label[for="playa"] {
-    background: var(--primary);
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* ================= FILTRO POR CATEGORIAS ================= */
+.filtro-btn.active {
+    background-color: var(--primary);
     border-color: var(--primary);
-}
-.filter-input:not(#todos):checked ~ .galeria .destinos-card {
-    order: 9999;
-    opacity: 0;
-    visibility: hidden;
-}
-#todos:checked ~ .galeria .destinos-card,
-#cultural:checked ~ .galeria .destinos-card.cultural,
-#naturaleza:checked ~ .galeria .destinos-card.naturaleza,
-#playa:checked ~ .galeria .destinos-card.playa {
-    order: 1 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+    color: white;
 }
 
-/* SECCION GALERIA MASONRY */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
-    grid-auto-rows: 10px;
-    gap: 20px;
+.filtro-btn {
+    background-color: var(--bs-border-color);
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--text-color);
 }
+
+.filtro-btn:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ================= GALERIA MASONRY ================= */
 .galeria .destinos-card {
     height: auto ;
-    grid-row-end: span 10;
     display: flex;
     flex-direction: column ;
-    order: 9999;
-    transition: all 0.4s ease;
     border-radius: 20px 20px;
-    box-shadow:none;
 } 
-.galeria .destinos-card:nth-child(4n+1) { 
-    grid-row-end: span 15; 
+
+.destinos-card.zoom-active {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
-.galeria .destinos-card:nth-child(4n+2) { 
-    grid-row-end: span 18; 
-}
-.galeria .card-image {
-    flex: 1;
-    min-height: 200px;
+
+.card-image {
+    position: relative;
     overflow: hidden;
+    border-radius: 20px;
+    height: 420px;
 }
-.galeria .card-image img {
+
+.card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+    object-fit: cover;   
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
-.galeria .card-overlay {
+
+.card-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top,rgba(0,0,0,0.7),rgba(0,0,0,0.2));
@@ -108,85 +68,31 @@ h1 {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-.galeria .card-content {
-    transform: translateY(20px);
-    transition: transform 0.4s ease;
+
+.card-content {
+    
+    color: white;
 }
-.card-content h2 {
-    margin: 0;
-    font-size: 20px;
+
+.destinos-card.zoom-active img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
 }
-.card-content p {
-    margin: 5px 0 0;
-    font-size: 14px;
-}
-.destinos-card:hover img {
-    transform: scale(1.1);
-}
-.destinos-card:hover .card-overlay {
+
+.destinos-card.zoom-active .card-overlay {
     opacity: 1;
 }
-.destinos-card:hover .card-content {
-    transform: translateY(0);
-}
 
-/* TABLA DE DESTINOS */
-.destinos {
-    height: auto;
-}
-.tabla {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-}
-.tabla-container {
-    width: 100%;
-    overflow-x: auto;
-    max-width: 1500px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-.tabla-destinos caption {
-    caption-side: top;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--text-color);
-    padding: 10px;
-    margin-bottom: 20px;
-}
-.tabla-destinos{
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-    background: var(--surface);
-    border-radius: 10px;
-    overflow: hidden;
-}
-.tabla-destinos thead {
-    background: var(--primary);
-}
+/* ================= TABLA DE DESTINOS ================= */
 .tabla-destinos th {
-    padding: 15px;
-    text-align: left;
-    font-weight: bold;
-    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
 }
 .tabla-destinos td {
-    padding: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 10px;
+    text-align: center;
     color: var(--text-color);
-}
-.filtros-destinos {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.filtros-destinos legend {
-    position: absolute;
-    left: -9999px; /* oculto visualmente pero accesible */
 }
 
 .nav-link:focus-visible,
@@ -216,43 +122,5 @@ logo:focus-visible {
         flex: 1 1 auto;
         text-align: center;
     }
-    .tabla-destinos thead {
-        display: none;
-    }
 
-    .tabla-destinos,
-    .tabla-destinos tbody,
-    .tabla-destinos tr,
-    .tabla-destinos td {
-        display: block;
-        width: 100%;
-    }
-
-    .tabla-destinos tr {
-        margin-bottom: 20px;
-        background: var(--surface);
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    .tabla-destinos td {
-        padding-left: 50%;
-        text-align: right;
-        position: relative;
-    }
-
-    .tabla-destinos td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 15px;
-        font-weight: bold;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--primary-hover);
-    }
-    .tabla-destinos caption {
-        display: block;
-        caption-side: top;
-        margin: 10px;
-    }
 }
