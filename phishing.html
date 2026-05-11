@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Educativo Phishing</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/phishing.css">
+</head>
+
+<body class="p-4">
+    <header class="bg-white border-bottom py-3 shadow-sm mb-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <!-- Logo y Título -->
+                <div class="d-flex align-items-center mb-3 mb-md-0">
+                    <div class="me-3">
+                        <img src="assets/img/logo-fi-unju-institucional.png" width="80" height="52" style="object-fit: contain;"/>
+                    </div>
+                    <div>
+                        <h1 class="mb-0 fw-bold fs-5 fs-md-4" style="letter-spacing: -0.5px;">
+                            <span class="text-primary">UNJu</span> Facultad de Ingeniería
+                        </h1>
+                        <small class="text-muted d-block" style="font-size: 0.85rem;">Módulo de Seguridad</small>
+                    </div>
+                </div>
+
+            <!-- Info de Progreso -->
+                <div class="d-flex align-items-center">
+                    <div class="text-center text-md-end me-3">
+                        <p class="mb-1 small fw-bold">
+                            Entrenamiento de Phishing <span id="found-count-header">0</span> / 3
+                        </p>
+                        <div class="progress" style="height: 6px; width: 150px; background-color: #e9ecef;">
+                            <div id="header-progress" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-primary text-white rounded-3 p-2 d-none d-sm-block">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container py-5">
+            <!-- Título Educativo -->
+            <div class="text-center">
+                <h2 class="fw-bold">Módulo de Phishing</h2>
+                <h3 class="text-muted">Identifica las señales de alerta en este mensaje</h3>
+                <p class="text-muted">Haz clic en los elementos que te parezcan sospechosos para analizarlos.</p>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-7">
+            
+            <!-- TARJETA DE EMAIL -->
+                <div class="email-card shadow-sm">    
+                <!-- Encabezado de Remitente -->
+                    <div class="p-4 border-bottom">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="sender-avatar me-3">P</div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <span class="fw-bold me-2">PayPal Security Team</span>
+                                    <span class="badge-urgent text-uppercase">Urgente</span>
+                                </div>
+                            <!-- ERROR 1: Dominio mal escrito (Typosquatting) -->
+                                <small class="text-muted">
+                                    Remitente: <span class="suspicious" data-type="domain">service@paypaI-security.com</span>
+                                </small>
+                            </div>
+                            <div class="ms-auto text-muted small">Hoy, 10:42 AM</div>
+                        </div>
+                    </div>
+
+                <!-- Cuerpo del Mensaje -->
+                    <div class="p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="Logo" width="120">
+                        </div>
+                        <h4 class="mb-4 fw-bold text-center">Acción requerida en su cuenta</h4>
+                        <p>Estimado usuario,</p>
+                        <p>Detectamos un inicio de sesión inusual desde <strong>Kiev, Ucrania</strong>. Si no fue usted, debe verificar su cuenta para evitar cargos fraudulentos.</p>
+                    <!-- ERROR 2: Botón con URL sospechosa -->
+                        <div class="my-4 text-center">
+                            <div class="suspicious w-100 py-3" data-type="url" data-url="https://paypal-secure-update.net/login" style="border:none;">
+                                <button class="btn btn-paypal shadow-sm px-5">Verificar mi identidad ahora</button>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Si necesita ayuda inmediata, puede contactar a soporte al: 
+                        <!-- ERROR 3: Teléfono falso -->
+                            <span class="suspicious fw-bold" data-type="phone">+1 (888) 552-9912</span>
+                        </p>
+                    </div>
+
+                <!-- Footer del Email -->
+                    <div class="bg-light p-3 text-center">
+                        <small class="text-muted" style="font-size: 0.7rem;">© 1999-2024 PayPal, Inc. Todos los derechos reservados.</small>
+                    </div>
+                </div> <!-- Fin de Email Card -->
+            </div>
+        </div>
+        <!-- Barra de estado para url -->
+        <div id="fake-status-bar"></div>
+    </main>
+
+    <!-- MODAL DINÁMICO -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title"><i class="fas fa-search me-2"></i> Análisis de Seguridad</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="modalContent">
+                        <!-- Aquí se inyecta la explicación -->
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL DE FINALIZACION  -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <i class="fas fa-check-circle text-success fa-4x animate__animated animate__bounceIn"></i>
+                    </div>
+                    <h2 class="fw-bold">¡Excelente Trabajo!</h2>
+                    <p class="lead">Has identificado todas las señales de phishing en este correo.</p>
+                    <p class="text-muted small">Recuerda: Siempre verifica el remitente, los enlaces y desconfía de la urgencia excesiva.</p>
+                    <a href="index.html" class="btn btn-success w-100 mt-3">Finalizar Módulo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Usamos un Set para guardar los IDs de los errores encontrados
+            let erroresEncontrados = new Set();
+            const totalErrores = 3;
+        
+            $(".suspicious").click(function() {
+                let type = $(this).data("type");
+                let content = "";
+                // Guardamos el error en nuestro Set
+                erroresEncontrados.add(type);
+                // Actualizamos el contador en la interfaz
+                $("#found-count").text(erroresEncontrados.size);
+                // actualizamos barra de progreso
+                let porcentaje = (erroresEncontrados.size / totalErrores) * 100;
+                $("#header-progress").css("width", porcentaje + "%");
+                if (porcentaje < 70) {
+                    $("#header-progress").removeClass("bg-success").addClass("bg-warning");
+                } else {
+                    $("#header-progress").removeClass("bg-warning").addClass("bg-success");
+                }
+
+                // Definimos el contenido del modal según el tipo
+                if (type === "domain") {
+                    content = `
+                        <h5 class="text-danger fw-bold">Señal: Typosquatting</h5>
+                        <p>Observa el remitente: <code>paypaI</code> usa una <strong>"I" mayúscula</strong>. Es un dominio falso.</p>
+                        <div class="alert alert-warning small">Los atacantes registran dominios casi idénticos para engañar al ojo humano.</div>`;
+                } else if (type === "url") {
+                    content = `
+                        <h5 class="text-danger fw-bold">Señal: Link Fraudulento</h5>
+                        <p>El botón apunta a <code>paypal-secure-update.net</code>. PayPal nunca usa esos dominios extraños.</p>
+                        <div class="alert alert-warning small">Antes de hacer clic, pasa el ratón sobre el botón para ver la dirección real en la esquina inferior del navegador.</div>`;
+                } else if (type === "phone") {
+                    content = `
+                        <h5 class="text-danger fw-bold">Señal: Ingeniería Social</h5>
+                        <p>Pedir llamadas telefónicas para "verificar" es una táctica para presionarte y que no pienses con claridad.</p>
+                        <div class="alert alert-warning small">Busca siempre el número oficial en la aplicación o la web oficial que tú mismo escribas en el navegador.</div>`;
+                }
+
+                $("#modalContent").html(content);
+                // Mostramos el modal de explicación
+                let infoModal = new bootstrap.Modal(document.getElementById('infoModal'));
+                infoModal.show();
+
+                // Cuando el modal de explicación se cierre, verificamos si ya ganó
+                $('#infoModal').on('hidden.bs.modal', function () {
+                    if (erroresEncontrados.size === totalErrores) {
+                        let successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                        successModal.show();
+                    }
+                    // Limpiar el evento para que no se acumule
+                    $(this).off('hidden.bs.modal');
+                });
+            });
+
+            // Lógica de la barra de estado (Hover)
+            $(".suspicious").hover(
+                function() {
+                    let link = $(this).data("url") || "mailto:service@paypaI-security.com";
+                    $("#fake-status-bar").text(link).fadeIn(100);
+                }, 
+                function() {
+                    $("#fake-status-bar").fadeOut(100);
+                }
+            );
+        });
+    </script>
+
+</body>
+</html>
