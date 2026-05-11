@@ -74,7 +74,7 @@
         </nav>
     </header>
 
-    <main class="snap-container" aria-labelledby="titulo-blog">
+    <main aria-labelledby="titulo-blog">
         <section class="blog-header text-center py-5">
             <h1 id="titulo-blog">Blog de Destinos</h1>
             <p>Explora los artículos de nuestros viajes a los destinos de ensueño</p>
@@ -90,7 +90,7 @@
                 </div>
 
             <!-- Seccion de BLOG -->
-                <section class="snap-section blog py-5">
+                <section class="blog py-5">
                     <div class="container">
                     <h2 class="sr-only text-center mb-4">Artículos del blog</h2>
 
@@ -172,7 +172,7 @@
             </section>
 
     <!-- Seccion de COMENTARIOS -->
-        <section class="snap-section comentarios py-5" aria-labelledby="titulo-comentarios">
+        <section class="comentarios py-5" aria-labelledby="titulo-comentarios">
             <div class="container">
                 <h2 class="text-center mb-4" id="titulo-comentarios">Comentarios</h2>
             
@@ -302,12 +302,11 @@
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
- 
+
     <!-- SCRIPT PARA EL CAMBIO DE TEMA A MODO CLARO/OSCURO -->
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;
-
         /* TEMA GUARDADO */
         const savedTheme = localStorage.getItem("theme");
             if (savedTheme === "dark") {
@@ -317,7 +316,6 @@
                 root.setAttribute("data-bs-theme", "light");
                 toggle.innerHTML = '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
             }
-
         /* CAMBIO DE TEMA */
         toggle.addEventListener("click", () => {
             const currentTheme = root.getAttribute("data-bs-theme");
