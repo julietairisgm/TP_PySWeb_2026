@@ -59,7 +59,7 @@ body {
 
 .hero {
     position: relative;
-    min-height: 92vh;
+    min-height: 94vh;
     overflow: hidden;
 }
 .hero::before {
@@ -179,15 +179,15 @@ body {
     color: var(--white);
 }
 .card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 .card-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .texto-precio {
     color: #dafdbd;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
 .card-overlay {
     position: absolute;
@@ -285,6 +285,12 @@ body {
     color: white;
     padding: 60px 5%;
 }
+.footer .form-suscripcion input{
+    background-color: rgb(218, 218, 218);
+    border: 0;
+    padding: 8px;
+    border-radius: 10px;
+}
 
 /* ==================== BOTONES ===================== */
 
@@ -309,6 +315,51 @@ html {
 .snap-section {
     min-height: 100vh;
     scroll-snap-align: start;
+}
+
+/* =============== SPRITE =============*/
+.redes {
+    display: flex;
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    background-size: 150px 150px;
+    background-image: url("../assets/img/sprite-redes.png");
+    background-repeat: no-repeat;
+}
+
+.icono-facebook {
+    background-position: -50px 0;
+}
+.icono-instagram {
+    background-position: -0 0;
+}
+.icono-twitter {
+    background-position: 0 -50px;
+}
+
+.icono-btn{
+    display:inline-block;
+    width:32px;
+    height:32px;
+    background-image:url("../assets/img/sprite-button.png");
+    background-repeat:no-repeat;
+    background-size:300px 300px;
+    background-position:-118px -80px;
+    vertical-align:middle;
+}
+
+.icono-like{
+    display:inline-block;
+    width:32px;
+    height:32px;
+    background-image:url("../assets/img/sprite-icons.png");
+    background-repeat:no-repeat;
+    background-size:100px 100px;
+    background-position: 3px -35px;
+    vertical-align:middle;
 }
 
 /* RESPONSIVE */

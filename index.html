@@ -30,11 +30,11 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="destinos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Destinos
+                            <i class="fa-solid fa-plane-departure"></i> Destinos
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="destinos.html">Perú</a></li>
@@ -46,7 +46,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="agencias.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Agencias
+                            <i class="fa-solid fa-address-card"></i> Agencias
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="agencias.html">Horizonte</a></li>
@@ -57,13 +57,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="precios.html">Tarifas</a>
+                            <a class="nav-link" href="precios.html"><i class="fa-solid fa-wallet"></i> Tarifas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+                            <a class="nav-link" aria-current="page" href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
+                            <a class="nav-link" aria-current="page" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
                         </li>
                     </ul>
                     <!-- MODO CLARO/OSCURO -->
@@ -92,7 +92,7 @@
     <!--Seccion de DESTACADOS-->
         <section class="snap-section destinos-content">
             <div class="container">
-                <h2 class="text-center mb-5"><i class="fa-solid fa-plane"></i>Destinos Destacados </h2>
+                <h2 class="text-center mb-5"><i class="fa-solid fa-plane"></i> Destinos Destacados </h2>
 
                 <div class="row g-4">
 
@@ -102,8 +102,8 @@
                                     <img src="assets/img/machupichu.png" class="card-img" alt="Machu Pichu">
                                     <div class="card-overlay">
                                         <div class="card-content d-flex flex-column align-items-center">
-                                            <h3>Machu Pichu</h3>
-                                            <p>Conoce la ciudad Inca</p>
+                                            <h3 class="text-white">Machu Pichu</h3>
+                                            <p class="text-white">Conoce la ciudad Inca</p>
                                             <div class="texto-precio d-flex justify-content-center align-items-center">
                                                 <span>Desde $1200</span>
                                             </div>
@@ -119,8 +119,8 @@
                                     <img src="assets/img/noruega.png" class="card-img" alt="Noruega">
                                     <div class="card-overlay">
                                         <div class="card-content d-flex flex-column align-items-center">
-                                            <h3>Noruega</h3>
-                                            <p>Un paraiso entre las montañas</p>
+                                            <h3 class="text-white">Noruega</h3>
+                                            <p class="text-white">Un paraiso entre las montañas</p>
                                             <div class="texto-precio d-flex justify-content-center align-items-center">
                                                 <span> Desde $2000</span>
                                             </div>
@@ -136,8 +136,8 @@
                                 <img src="assets/img/estambul.png" class="card-img" alt="Estambul">
                                 <div class="card-overlay">
                                     <div class="card-content d-flex flex-column align-items-center">
-                                        <h3>Estambul</h3>
-                                        <p>Donde el sultanato revive</p>
+                                        <h3 class="text-white">Estambul</h3>
+                                        <p class="text-white">Donde el sultanato revive</p>
                                         <div class="texto-precio d-flex justify-content-center align-items-center">
                                             <span>Desde $3000</span>
                                         </div>
@@ -247,7 +247,7 @@
                         <label for="email" class="form-label text-center">Recibe las mejores ofertas directamente en tu correo</label>
                         <input id="email" type="email" class="form-control mb-3" placeholder="tu@email.com" required/>
                         <button class="btn btn-primary w-100" type="submit">
-                            <i class="fa-solid fa-paper-plane"></i>
+                            <span class="icono-btn"></span>
                             ¡Suscribirme!
                         </button>
                     </form>
@@ -256,19 +256,13 @@
             <!-- REDES SOCIALES -->
                 <div class="col-12 col-md-6 col-lg-4 text-center">
                     <h3 class="h4 mb-4">
-                        <i class="fa-solid fa-share-nodes"></i>
+                        <span class="icono-like"></span>
                         Síguenos
                     </h3>
-                    <div class="d-flex justify-content-center gap-3 mb-4">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
+                    <div class="redes d-flex justify-content-center gap-3 mb-4">
+                        <a href="#" class="icono icono-facebook"></a>
+                        <a href="#" class="icono icono-instagram"></a>
+                        <a href="#" class="icono icono-twitter"></a>
                     </div>
                     <p class="mb-0">Comparte tus aventuras con nosotros</p>
                 </div>
