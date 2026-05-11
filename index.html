@@ -182,7 +182,6 @@
                         <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
                     </div>
 
-
                     <!-- SLIDES -->
                     <div class="carousel-inner">
 
@@ -301,10 +300,8 @@
     <script>
         const toggle = document.getElementById("themeToggle");
         const root = document.documentElement;
-
         /* TEMA GUARDADO */
         const savedTheme = localStorage.getItem("theme");
-
             if (savedTheme === "dark") {
                 root.setAttribute("data-bs-theme", "dark");
                 toggle.innerHTML = '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>';
@@ -312,14 +309,12 @@
                 root.setAttribute("data-bs-theme", "light");
                 toggle.innerHTML = '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
             }
-
         /* CAMBIO DE TEMA */
         toggle.addEventListener("click", () => {
             const currentTheme = root.getAttribute("data-bs-theme");
             const newTheme = currentTheme === "dark" ? "light" : "dark";
             root.setAttribute("data-bs-theme", newTheme);
             localStorage.setItem("theme", newTheme);
-    
             toggle.innerHTML = newTheme === "dark" ? '<i class="fa-solid fa-sun" style="color: rgb(255, 199, 0);"></i>' : '<i class="fa-solid fa-moon" style="color: rgb(255, 199, 0);"></i>';
         });
     </script>

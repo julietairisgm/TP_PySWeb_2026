@@ -365,12 +365,6 @@ html {
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
-    .nav-menu {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-    }
-
     .destinos-content {
         padding: 20px;
     }
@@ -391,44 +385,12 @@ html {
     }
 
     .counter-numbers span {
-        font-size: 3rem;
+        font-size: 4rem;
     }
-
-    .stat-container {
-        height: 60px;
-    }
+    
     .slider-container {
         max-width: 100%;
         padding: 10px;
     }
 
-    .testimonio-card {
-        padding: 20px 10px;
-    }
-
-    .testimonios h2 {
-        font-size: 1.8rem;
-    }
-
-    .testimonios h3 {
-        font-size: 1.4rem;
-    }
-        .hamburger {
-        display: block;
-    }
-
-    .nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--surface);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        z-index: 1000;
-    }
-
-    .menu-toggle:checked ~ .nav {
-        display: block;
-    }
 }
